@@ -1,0 +1,20 @@
+services:
+  # 프론트엔드 (Vite + React)
+  - type: web
+    name: deping-frontend
+    rootDir: frontend
+    env: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: false
+
+  # 백엔드 (FastAPI)
+  - type: web
+    name: deping-backend
+    rootDir: backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        sync: false
