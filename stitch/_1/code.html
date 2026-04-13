@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#b3c5ff",
+                        "on-surface": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb4a9",
+                        "on-background": "#1a1c1c",
+                        "secondary-container": "#fe7c6c",
+                        "on-secondary-container": "#72140e",
+                        "outline": "#916f6a",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "on-tertiary-fixed": "#001849",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#85231a",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#ffc7bf",
+                        "primary": "#8e0004",
+                        "tertiary-fixed": "#dae1ff",
+                        "on-surface-variant": "#5c403c",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#c6d3ff",
+                        "primary-fixed": "#ffdad5",
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#b9090b",
+                        "surface-tint": "#bd0f0e",
+                        "tertiary": "#003d9e",
+                        "tertiary-container": "#0052cf",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#410001",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffdad5",
+                        "inverse-primary": "#ffb4a9",
+                        "secondary": "#a53a2f",
+                        "on-primary-fixed": "#410001",
+                        "outline-variant": "#e6bdb7",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-fixed-variant": "#003fa3",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-fixed-variant": "#930004",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+        }
+        .cinematic-shadow {
+            box-shadow: 0 12px 32px -4px rgba(142, 0, 4, 0.06);
+        }
+        .ruby-gradient {
+            background: linear-gradient(135deg, #8e0004 0%, #b9090b 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-50/85 backdrop-blur-xl flex justify-between items-center px-8 h-16 w-full shadow-[0_12px_32px_-4px_rgba(142,0,4,0.06)] font-inter antialiased">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-red-700">Deeping</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-neutral-500 hover:text-neutral-900 transition-all duration-300" href="#">Cinema</a>
+<a class="text-neutral-500 hover:text-neutral-900 transition-all duration-300" href="#">Discover</a>
+<a class="text-red-700 font-bold border-b-2 border-red-700" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-1.5 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary w-64 transition-all" placeholder="Search archives..." type="text"/>
+</div>
+<button class="p-2 hover:bg-neutral-100 rounded-full transition-all duration-300 active:scale-90">
+<span class="material-symbols-outlined text-red-700">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden md:flex h-screen w-64 fixed left-0 top-0 pt-20 flex-col gap-4 p-6 bg-neutral-100 border-r border-neutral-200/20 font-inter text-sm font-medium">
+<div class="mb-4">
+<h2 class="text-on-surface font-bold text-lg">Taste Profiles</h2>
+<p class="text-on-surface-variant text-xs">Your curated identity</p>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 p-3 text-neutral-600 hover:bg-neutral-200/50 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">theaters</span>
+                Cinema
+            </a>
+<a class="flex items-center gap-3 p-3 text-neutral-600 hover:bg-neutral-200/50 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">explore</span>
+                Discover
+            </a>
+<a class="flex items-center gap-3 p-3 text-red-700 font-bold bg-neutral-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+                Journal
+            </a>
+</nav>
+<div class="mt-auto space-y-1">
+<button class="w-full ruby-gradient text-on-primary py-3 rounded-xl font-bold cinematic-shadow active:opacity-80 transition-all mb-4">
+                Analyze Mood
+            </button>
+<a class="flex items-center gap-3 p-3 text-neutral-600 hover:bg-neutral-200/50 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-sm">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 p-3 text-neutral-600 hover:bg-neutral-200/50 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-sm">help_outline</span>
+                Help
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero: Viewing DNA -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1">
+<h1 class="text-4xl font-extrabold tracking-tight mb-2">My Deeping</h1>
+<p class="text-on-surface-variant text-lg max-w-xl">A mirror of your cinematic soul. Refined daily through your dialogue with the craft.</p>
+</div>
+<div class="w-full md:w-auto">
+<button class="group flex items-center gap-3 ruby-gradient px-8 py-4 rounded-full text-on-primary font-bold cinematic-shadow hover:scale-105 transition-all">
+<span>Start a new conversation</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bento DNA Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-3xl cinematic-shadow relative overflow-hidden">
+<div class="relative z-10">
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Current Profile</span>
+<h3 class="text-2xl font-bold mb-6">Your Viewing DNA</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-low rounded-full text-sm font-medium">Noir Minimalism</span>
+<span class="px-4 py-2 bg-surface-container-low rounded-full text-sm font-medium">90s Hong Kong</span>
+<span class="px-4 py-2 bg-surface-container-low rounded-full text-sm font-medium">Surrealist Narrative</span>
+<span class="px-4 py-2 bg-surface-container-low rounded-full text-sm font-medium">Technicolor Epics</span>
+</div>
+<p class="mt-8 text-on-surface-variant italic leading-relaxed">
+                            "You seem to be gravitating towards high-contrast visual storytelling with a preference for non-linear timelines and isolationist character arcs."
+                        </p>
+</div>
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl cinematic-shadow flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Active Pulse</span>
+<h3 class="text-2xl font-bold">Curation Score</h3>
+</div>
+<div class="py-4">
+<div class="text-6xl font-black text-primary tracking-tighter">84<span class="text-2xl opacity-50">%</span></div>
+<p class="text-on-surface-variant text-sm mt-2">Alignment with critical consensus</p>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[84%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visualization: Zone vs Frontiers -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold">The Horizon Map</h2>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 text-xs">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span>Comfort Zone</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span>New Frontiers</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="relative aspect-square md:aspect-video lg:aspect-square bg-surface-container-low rounded-3xl overflow-hidden flex items-center justify-center p-12">
+<!-- Abstract Radar/Frontier Chart -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #8e0004 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative w-full h-full flex items-center justify-center">
+<div class="w-4/5 h-4/5 border border-outline-variant/30 rounded-full flex items-center justify-center">
+<div class="w-3/4 h-3/4 border border-outline-variant/30 rounded-full flex items-center justify-center">
+<div class="w-1/2 h-1/2 border border-outline-variant/30 rounded-full"></div>
+</div>
+</div>
+<!-- Polygonal Shape representing data -->
+<svg class="absolute inset-0 w-full h-full p-4 drop-shadow-xl" viewbox="0 0 100 100">
+<polygon fill="rgba(142,0,4,0.15)" points="50,10 85,30 90,75 50,90 10,75 15,30" stroke="#8e0004" stroke-width="0.5"></polygon>
+<circle cx="50" cy="10" fill="#8e0004" r="1.5"></circle>
+<circle cx="85" cy="30" fill="#8e0004" r="1.5"></circle>
+<circle cx="90" cy="75" fill="#8e0004" r="1.5"></circle>
+<circle cx="50" cy="90" fill="#8e0004" r="1.5"></circle>
+<circle cx="10" cy="75" fill="#8e0004" r="1.5"></circle>
+<circle cx="15" cy="30" fill="#8e0004" r="1.5"></circle>
+</svg>
+</div>
+</div>
+<div class="space-y-6">
+<div class="p-6 bg-surface-container-lowest rounded-2xl border-l-4 border-primary cinematic-shadow">
+<h4 class="font-bold mb-1">Comfort Zone: Italian Neorealism</h4>
+<p class="text-sm text-on-surface-variant">You've explored 42 titles in this space. Your appreciation for gritty authenticity remains your foundation.</p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border-l-4 border-secondary cinematic-shadow">
+<h4 class="font-bold mb-1">New Frontier: South Korean Revenge</h4>
+<p class="text-sm text-on-surface-variant">Growing interest in stylised violence and poetic justice. Recommended departure: "Sympathy for Lady Vengeance".</p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-2xl border-l-4 border-outline-variant/50 cinematic-shadow">
+<h4 class="font-bold mb-1">Uncharted: Nordic Folk Horror</h4>
+<p class="text-sm text-on-surface-variant">A dark corner you haven't touched. High alignment potential based on your love for slow-burn atmosphere.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sessions by Mood -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold">Previous Sessions</h2>
+<button class="text-primary font-bold text-sm hover:underline">View All Archives</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Mood Card 1 -->
+<div class="group bg-surface-container-low p-1 rounded-3xl hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="bg-surface-container-lowest p-6 rounded-[calc(1.5rem-2px)] h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Oct 24, 2023</span>
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Fast &amp; Furious Friday</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">"Something high octane but with a soul. No mindless explosions."</p>
+<div class="mt-auto flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="movie poster of a neon-lit street racing scene in Tokyo at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqjkx_15OxiHnv__14dI8caYUIvuxQ53kYvoh8rhbsq6WcExPgOzvUDZMqfZBVkAlhT86s2CTsM3D7MCY20vykufJDbLgoewQMcp0DZ6gFqUavWzaBQ7BrhsuRc6wfXerMmeFSV3I3PLy3hvgF9LW0bylfis04wMVcQ75dWiyHQjWkKKZarTuwjz3WcbokxgNeNk0GH1tr7zayvZHhEt7gRoRQ1y34lgPq4umNG1WmSRRRs8e_sg2O4w7eeRFsFf4PouHc3Bu22Dc"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="close up of high tech car dashboard glowing blue in the dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNu7KqKregiEqsWsNB_0UR4wQkjZ86IMoLXBWPN8RyGNe_GuK3aB3up3n1uDbdoiNZM1e0A8pWE733ZLFYlITkILxrzmB-sQSPO5hbOAk24CtkHqJxQHkX87l-vF6ZEZQGmA56LCmPtICR44lResfanR8STSLs6iTVQv5QSf6ORnbG9guw4-fFmnh4GSqG7u0OTYDcXJv8OA-DuF4MAHYocN6xpl_mVIiJlR2-dDQHby7WMEkAId8WC2F3Teb1qRO6VUWbpLC9mkw"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+</div>
+</div>
+<!-- Mood Card 2 -->
+<div class="group bg-surface-container-low p-1 rounded-3xl hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="bg-surface-container-lowest p-6 rounded-[calc(1.5rem-2px)] h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Oct 22, 2023</span>
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Cerebral Sundays</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">"Complex narratives that require a notebook. Philosophical sci-fi."</p>
+<div class="mt-auto flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="abstract geometric structure floating in a white void minimalistic sci-fi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0SfY86ZzR_p70-knBxHLb6DFMwKpv2s0FBPE_u_Q5dQjdLSpM5BLrsky4rAQSSWPSEdpUwXF1Wy6m1KHFzTpWJTRA0EysTln7U0PcW6lj0pKBv36-ti5S5F8G8smfyokPCX-C9OCsdf-N9pK-BDMdiT0P5aEw2JlGlorV8kl_ttD3-PPziScVsJzYOymBO2jcrWLZtU-awtbagX4RBSPCy_P8dXKcCpKgytO02T2XEEpLQ77hxvNPOqodU2kS6urPRufyPramFsc"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="black and white architecture shot of a spiral concrete staircase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAApn5wZASO7z245m1eC4-Yq0iSTUH3V-ve1THuO_mtKUy38dBBr1Y7kTAtu4PK6_VjDd4_KD57y1wdufPidbO9FpPfdvMquYrihBzuEzP7i_cegx8VcnlN7cCS7YbzjrWeDxS-OkjysQfJtieYEzYELHmaCq-FFf--wCLQOA9xc_TQ0-n31awXanhppFO5tLIMca6GhtYGJrJoOuOoF4MazgLSuKlvJuSxNod158FjYyVjvnK0J0rsGwZgA5OkcujUK2lAoPjgj8A"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container flex items-center justify-center text-[10px] font-bold">+1</div>
+</div>
+</div>
+</div>
+<!-- Mood Card 3 -->
+<div class="group bg-surface-container-low p-1 rounded-3xl hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="bg-surface-container-lowest p-6 rounded-[calc(1.5rem-2px)] h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Oct 19, 2023</span>
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Rainy Noir Echoes</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">"Melancholic detectives and wet pavement. Jazz-heavy soundtracks."</p>
+<div class="mt-auto flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="silhouette of a man in a trench coat standing under a street lamp in rain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_aVFgoZ5oO2RY8iDyq2H4doj3XybevoSgKsq7jj-LoLYA3xfMnCaWCMolOwl_L_ZqP2Qp3t_-hbhC4KNIeo_kbNTUgbQPyr1lGyDZa4LWXYUpnNhYRjMqmorWG9U-pzo030ZEsddO_MyPIVRA6El-QJWdCTlhOesrNG9qDh8IBwD5vQdkXRetTA7MAkzOqyDktJW_06oZo4-lbqZ2afFqarzbJ9u_SijIkczIKdYcNqeNu_M-rkZVE88D-y7E1V1wsyuMiH2rTPQ"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual "Curated For You" Stack -->
+<section class="mt-16">
+<h2 class="text-2xl font-bold mb-8">The Staggered Stack</h2>
+<div class="relative flex flex-col md:flex-row gap-8">
+<!-- Staggered Card 1 -->
+<div class="md:translate-y-4 w-full md:w-1/3 bg-surface-container-low rounded-3xl p-4 cinematic-shadow">
+<img class="w-full aspect-[2/3] object-cover rounded-2xl mb-4" data-alt="cinematic shot of a lone spaceship orbiting a dying orange star dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApH5Mq2aFaAPGdWmYYaii_jb2VowpkiJX8OXFmJqb9zDWjfQ7vfLg122elS347LxI3MqgYSXgukonwdWeAH-Z-ocQNb6eQxijeMhMYf9kC8jnPol-TUeGw7fEv21FP1zJVcqMssukNMWI4_ulfCeM0IlncmNbRgvwrGGM7MU3uE15G1AGsErH-vGNvEWBlNoP992_uGSNfFBKFWLyKy7_nyE3J14RXa1tUYt3U_c_CZcV44gp55ClnGKXNXgxV4P4lioqH-5oEqOM"/>
+<div class="px-2 pb-2">
+<h4 class="font-bold">Event Horizon: Revisited</h4>
+<p class="text-xs text-on-surface-variant">Because you liked 'Interstellar'</p>
+</div>
+</div>
+<!-- Staggered Card 2 -->
+<div class="md:-translate-y-4 w-full md:w-1/3 bg-surface-container-low rounded-3xl p-4 cinematic-shadow">
+<img class="w-full aspect-[2/3] object-cover rounded-2xl mb-4" data-alt="vibrant street market in Seoul at dusk with blurred people and colorful signs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp3EbOdUrhxsgt3TccpZPIUUf8nVZ5QLvFPQqbm5902KdSfX6vobqT4hQVTy0Z82X22QygTjsgzOzeWcRjLZ58wVr_301c-ldZx2_yxaykygMJPp5KmImFlp9d_VDknyMTeoWMDFYt-dP7nfurkDRmOrq70yOHC-5J3Qt6QS44ghULOf_ftt62jNKyAwgltv1t9mnjvnwXz0ZQlj_d5p0IFJhAJN343gm_N2vqbqA0lTcQpTzG8X0EBkmWM4knb_uiQr8K-GsqIrs"/>
+<div class="px-2 pb-2">
+<h4 class="font-bold">Midnight in Seoul</h4>
+<p class="text-xs text-on-surface-variant">Your current 'New Frontier' focus</p>
+</div>
+</div>
+<!-- Staggered Card 3 -->
+<div class="md:translate-y-8 w-full md:w-1/3 bg-surface-container-low rounded-3xl p-4 cinematic-shadow">
+<img class="w-full aspect-[2/3] object-cover rounded-2xl mb-4" data-alt="gloomy library with tall mahogany shelves and dust motes dancing in sunbeams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZS71FUyJrvQGifYycYbSY1RvezXAkHEy_ty1JKxPansBMyxSgBSHawfdYCiUOsLjdPSv1LIoLoX01jyjkFrzGDO5BVUOEY2V3Xtayxxyq0KFpkD0u-HcW99mocorpgbdWSgJg5UyXj7DDeUI3q5qsoc90NIk9130iDcXuu5rlZy9AAitWAnAhRDvqCblZU-QUo_IVhCGU4wmBabODeQngtrd2n73THwvtCeHRSJ89iU9EJ1bhbNAenykA0CLIdvrbsGBBI7U8m0"/>
+<div class="px-2 pb-2">
+<h4 class="font-bold">The Library of Babel</h4>
+<p class="text-xs text-on-surface-variant">Recommended surrealist narrative</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-neutral-50/90 backdrop-blur-xl flex justify-around items-center px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-neutral-500">
+<span class="material-symbols-outlined">theaters</span>
+<span class="text-[10px]">Cinema</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-neutral-500">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px]">Discover</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-red-700 font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[10px]">Journal</span>
+</button>
+</div>
+</body></html>

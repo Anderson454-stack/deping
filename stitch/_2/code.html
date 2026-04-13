@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#b3c5ff",
+                    "on-surface": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "on-background": "#1a1c1c",
+                    "secondary-container": "#fe7c6c",
+                    "on-secondary-container": "#72140e",
+                    "outline": "#916f6a",
+                    "surface-dim": "#dadada",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "on-tertiary-fixed": "#001849",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#85231a",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#ffc7bf",
+                    "primary": "#8e0004",
+                    "tertiary-fixed": "#dae1ff",
+                    "on-surface-variant": "#5c403c",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#c6d3ff",
+                    "primary-fixed": "#ffdad5",
+                    "inverse-surface": "#2f3131",
+                    "surface-bright": "#f9f9f9",
+                    "primary-container": "#b9090b",
+                    "surface-tint": "#bd0f0e",
+                    "tertiary": "#003d9e",
+                    "tertiary-container": "#0052cf",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-primary": "#ffb4a9",
+                    "secondary": "#a53a2f",
+                    "on-primary-fixed": "#410001",
+                    "outline-variant": "#e6bdb7",
+                    "surface-container": "#eeeeee",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-fixed-variant": "#003fa3",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-primary-fixed-variant": "#930004",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cinematic-shadow {
+            box-shadow: 0 12px 32px -4px rgba(142, 0, 4, 0.06);
+        }
+        .dna-chart-gradient {
+            background: conic-gradient(from 0deg, #8e0004 0%, #b9090b 25%, #f9f9f9 50%, #b9090b 75%, #8e0004 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-50/85 backdrop-blur-xl flex justify-between items-center px-8 h-16 shadow-[0_12px_32px_-4px_rgba(142,0,4,0.06)] font-inter">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black tracking-tighter text-red-700">Deeping</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-red-700 font-bold border-b-2 border-red-700" href="#">Cinema</a>
+<a class="text-neutral-500 hover:text-neutral-900 transition-all duration-300" href="#">Discover</a>
+<a class="text-neutral-500 hover:text-neutral-900 transition-all duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-neutral-100 rounded-full transition-all duration-300 active:scale-90">
+<span class="material-symbols-outlined text-neutral-600" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-neutral-100 border-r border-neutral-200/20 hidden lg:flex flex-col gap-4 p-6 z-40">
+<div class="mb-6 px-2">
+<h2 class="text-on-surface font-bold text-lg leading-tight">Taste Profiles</h2>
+<p class="text-on-surface-variant text-xs">Your curated identity</p>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-2 text-red-700 font-bold bg-neutral-200 rounded-lg hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="theaters">theaters</span>
+<span class="text-sm">Cinema</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-600 hover:bg-neutral-200/50 rounded-lg hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="explore">explore</span>
+<span class="text-sm">Discover</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-600 hover:bg-neutral-200/50 rounded-lg hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span>
+<span class="text-sm">Journal</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-1 border-t border-neutral-200/40 pt-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold text-sm mb-4 active:opacity-80 transition-all shadow-lg shadow-primary/10">Analyze Mood</button>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-600 hover:bg-neutral-200/50 rounded-lg text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-600 hover:bg-neutral-200/50 rounded-lg text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Help</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:pl-64 pt-20 min-h-screen flex flex-col lg:flex-row">
+<!-- Interaction Canvas -->
+<section class="flex-1 px-4 md:px-12 py-8 flex flex-col max-w-4xl mx-auto w-full">
+<header class="mb-12 text-center lg:text-left">
+<h1 class="text-4xl font-black tracking-tight text-on-surface mb-2">Auteur DNA Calibration</h1>
+<p class="text-on-surface-variant">The discovery engine is fine-tuning your unique cinematic profile.</p>
+</header>
+<!-- Chat Interface -->
+<div class="flex flex-col gap-10 mb-24">
+<!-- System Message -->
+<div class="flex items-start gap-4 max-w-2xl">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-high text-on-surface p-5 rounded-xl rounded-bl-sm">
+<p class="leading-relaxed">To build your profile, I need to understand your current emotional threshold. How do you feel about high emotional load today?</p>
+</div>
+<!-- Choice Chips Integrated in Flow -->
+<div class="flex flex-wrap gap-3 mt-4">
+<button class="px-5 py-2.5 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-sm font-medium">Ready for catharsis</button>
+<button class="px-5 py-2.5 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-sm font-medium">Emotional buffer needed</button>
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary text-sm font-medium cinematic-shadow">Keep it intellectual</button>
+<button class="px-5 py-2.5 rounded-full border border-outline-variant hover:bg-surface-container transition-all text-sm font-medium">Surprise me</button>
+</div>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-start gap-4 justify-end">
+<div class="max-w-2xl bg-primary text-on-primary p-5 rounded-xl rounded-br-sm shadow-sm">
+<p class="leading-relaxed">I'm looking for something that challenges my logic but keeps the emotional stakes grounded. Less melodrama, more mystery.</p>
+</div>
+</div>
+<!-- System Message 2 with Slider -->
+<div class="flex items-start gap-4 max-w-2xl">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="space-y-6 w-full">
+<div class="bg-surface-container-high text-on-surface p-5 rounded-xl rounded-bl-sm">
+<p class="leading-relaxed">Understood. Logical complexity elevated. Let's calibrate the 'Visual Poetics'. How much weight should I give to abstract visual storytelling versus narrative directness?</p>
+</div>
+<!-- Interactive Slider Card -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6">
+<span>Literal Narrative</span>
+<span>Abstract Poetics</span>
+</div>
+<div class="relative h-1 w-full bg-surface-container-highest rounded-full">
+<div class="absolute left-0 h-full w-2/3 bg-primary rounded-full"></div>
+<div class="absolute left-2/3 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white rounded-full cinematic-shadow border-4 border-primary cursor-pointer transition-transform hover:scale-110"></div>
+</div>
+<div class="mt-6 flex items-center gap-2 text-on-surface-variant italic text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span>Your setting leans towards "Atmospheric Pacing"</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Chat Input -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-3xl px-4 z-50">
+<div class="bg-surface-container-lowest/85 backdrop-blur-xl cinematic-shadow rounded-full p-2 pl-6 flex items-center gap-4 border border-outline-variant/20">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/60" placeholder="Refine your DNA further..." type="text"/>
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right DNA Panel (Side Panel) -->
+<aside class="w-full lg:w-96 bg-surface-container-low border-l border-outline-variant/10 p-8 flex flex-col gap-8">
+<div>
+<h3 class="text-xs font-black uppercase tracking-[0.2em] text-primary mb-6">Live Taste DNA</h3>
+<!-- DNA Visualization -->
+<div class="relative aspect-square w-full bg-surface-container-lowest rounded-3xl p-8 flex items-center justify-center cinematic-shadow">
+<!-- Placeholder for Radar/DNA Chart -->
+<div class="absolute inset-0 flex items-center justify-center opacity-10">
+<div class="w-64 h-64 border-[1px] border-primary rounded-full"></div>
+<div class="absolute w-48 h-48 border-[1px] border-primary rounded-full"></div>
+<div class="absolute w-32 h-32 border-[1px] border-primary rounded-full"></div>
+</div>
+<svg class="w-full h-full relative z-10 filter drop-shadow-sm" viewbox="0 0 100 100">
+<polygon fill="rgba(142, 0, 4, 0.08)" points="50,10 85,30 80,70 50,90 20,70 15,30" stroke="#8e0004" stroke-width="0.5"></polygon>
+<circle cx="50" cy="10" fill="#8e0004" r="2"></circle>
+<circle cx="85" cy="30" fill="#8e0004" r="2"></circle>
+<circle cx="80" cy="70" fill="#8e0004" r="2"></circle>
+<circle cx="50" cy="90" fill="#8e0004" r="2"></circle>
+<circle cx="20" cy="70" fill="#8e0004" r="2"></circle>
+<circle cx="15" cy="30" fill="#8e0004" r="2"></circle>
+</svg>
+<div class="absolute top-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">Melancholy</div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-on-surface-variant">Thrill</div>
+<div class="absolute top-1/2 left-4 -translate-y-1/2 -rotate-90 text-[10px] font-bold text-on-surface-variant">Abstract</div>
+<div class="absolute top-1/2 right-4 translate-y-1/2 rotate-90 text-[10px] font-bold text-on-surface-variant">Logic</div>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-sm font-bold text-on-surface">Dominant Traits</h4>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Atmospheric Pacing</span>
+<span class="text-primary font-bold">84%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[84%] bg-primary"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Moral Ambiguity</span>
+<span class="text-primary font-bold">62%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[62%] bg-primary"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Surrealist Palette</span>
+<span class="text-primary font-bold">41%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[41%] bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-8">
+<div class="bg-surface-container-highest rounded-2xl p-6 relative overflow-hidden group cursor-pointer">
+<div class="relative z-10">
+<p class="text-xs font-bold text-primary mb-2">Discovery Ready</p>
+<h5 class="text-lg font-bold leading-tight mb-4">View Curated Premiere</h5>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<span>24 matching titles</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+</div>
+</div>
+</aside>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md flex justify-around items-center h-16 z-50 shadow-2xl border-t border-neutral-100">
+<button class="flex flex-col items-center justify-center gap-1 text-red-700">
+<span class="material-symbols-outlined" data-icon="theaters" style="font-variation-settings: 'FILL' 1;">theaters</span>
+<span class="text-[10px] font-bold">Cinema</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px]">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-neutral-400">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[10px]">Journal</span>
+</button>
+</nav>
+</body></html>
