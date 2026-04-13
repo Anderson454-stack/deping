@@ -28,9 +28,12 @@
 | `src/hooks/useChat.js` | 채팅 상태 관리 훅 |
 | `src/components/motion/PageTransition.jsx` | Framer Motion 유틸 |
 | `src/pages/ChatGuide.jsx` | 채팅 페이지 완성본 |
-| `src/components/TopNavBar.jsx` | 상단 네비 |
-| `src/components/SideNavBar.jsx` | 좌측 메뉴 |
-| `src/components/MobileBottomNav.jsx` | 모바일 하단 탭 |
+| `src/pages/Dashboard.jsx` | 대시보드 (DNA, Community Fallback, Feed 통합) |
+| `src/components/layout/TopNavBar.jsx` | 상단 네비 (링크 정리 완료) |
+| `src/components/layout/SideNavBar.jsx` | 좌측 메뉴 (메인 네비게이션 허브) |
+| `src/components/layout/MobileBottomNav.jsx` | 모바일 하단 탭 |
+| `src/components/dashboard/GlobalCinemaFeed.jsx` | 잡지 레이아웃 영화 뉴스 피드 |
+| `src/components/dashboard/BoxOfficeCard.jsx` | 수직형 시네마틱 박스오피스 카드 (Staggered 크기) |
 
 ---
 
@@ -81,33 +84,20 @@ Available CSS Variables:
 
 ## Pending Tasks
 
-### [TASK-A] PageTransition 적용
-**대상 파일**: `src/pages/Dashboard.jsx`, `src/pages/MovieDetail.jsx`
+### [TASK-A] PageTransition 적용 (잔여)
+**대상 파일**: `src/pages/MovieDetail.jsx`
 
 각 페이지 최상위에 `<PageTransition>` 래퍼 추가:
 ```jsx
 import { PageTransition } from '../components/motion/PageTransition';
 
-export default function Dashboard() {
+export default function MovieDetail() {
   return (
     <PageTransition>
       {/* 기존 코드 그대로 유지 */}
     </PageTransition>
   );
 }
-```
-
-`StaggeredStack` 카드 배치는 `<StaggerList>` + `<StaggerListItem>`으로 감싸기:
-```jsx
-import { StaggerList, StaggerListItem } from '../components/motion/PageTransition';
-
-<StaggerList className="기존_클래스">
-  {items.map(item => (
-    <StaggerListItem key={item.id}>
-      <ExistingCard {...item} />
-    </StaggerListItem>
-  ))}
-</StaggerList>
 ```
 
 ---

@@ -133,6 +133,8 @@ style={{ color: 'var(--color-text-primary)', background: 'var(--color-primary)' 
 - [x] `components/chat/RecommendationCard.jsx` — 클릭 시 `/movie/:id` 이동
 - [x] `components/dashboard/StaggeredStack.jsx` — `StaggerList` / `StaggerListItem` 교체
 - [x] `.env.local` — `VITE_API_BASE_URL`, `.gitignore`에 `*.local` 포함
+- [x] `vite.config.js` — `allowedHosts: true` (boolean) 설정, ngrok 외부 접속 허용 (Vite 8 호환)
+- [x] `components/dashboard/BoxOfficeCard.jsx` — Task H, 세로형 cinematic card, aspect-[2/3] 포스터, ruby-gradient 순위 배지, JSX 파싱 오류 수정 (`</p>` → `</span>`)
 
 ---
 
@@ -232,4 +234,4 @@ npm install framer-motion   # 이미 설치됨
 
 ---
 
-*Last updated: 2026-04-13 | Maintained by: Claude Code*
+*Last updated: 2026-04-13 (ngrok 설정, BoxOfficeCard 버그 수정) | Maintained by: Claude Code*

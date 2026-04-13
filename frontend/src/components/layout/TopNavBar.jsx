@@ -6,11 +6,6 @@ const TopNavBar = () => {
     <nav className="fixed top-0 w-full z-50 glass-header flex justify-between items-center px-6 md:px-8 h-16 cinematic-shadow">
       <div className="flex items-center gap-8">
         <Link to="/" className="text-2xl font-black tracking-tighter text-primary">Deeping</Link>
-        <div className="hidden md:flex gap-6 items-center">
-          <Link className="text-on-surface-variant hover:text-on-surface transition-all duration-300" to="/">Cinema</Link>
-          <a className="text-on-surface-variant hover:text-on-surface transition-all duration-300" href="#">Discover</a>
-          <a className="text-primary font-bold border-b-2 border-primary" href="#">Journal</a>
-        </div>
       </div>
       
       <div className="flex items-center gap-4">
