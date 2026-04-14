@@ -1,0 +1,21 @@
+Step 3 — 실행 순서
+터미널 1 — FastAPI 백엔드
+cd D:\deping\backend
+uvicorn main:app --host 127.0.0.1 --port 8000
+터미널 2 — Vite 프론트엔드
+cd D:\deping\frontend
+npm run dev
+터미널 3 — ngrok (터널 1개)
+cd D:\deping
+.\ngrok.exe start frontend --config "C:\Users\원준\AppData\Local\ngrok\ngrok.yml"
+
+
+프로젝트 데이터 저장 및 사용
+
+Azure Blob Storage의 "컨테이너"
+**raw-dataTMDB** 
+- 수집한 tmdb_movies.json
+- NSMC reviews.csv
+- IMDB 리뷰 원본
+= 처음 데이터 수집할 때
+
