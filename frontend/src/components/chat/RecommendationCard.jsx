@@ -1,7 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const RecommendationCard = ({ movie }) => {
+const ACTION_CHIPS = ['More like this', 'Slower pace', 'Surprise me'];
+
+const RecommendationCard = ({ movie, onChipClick }) => {
   const navigate = useNavigate();
 
   return (
@@ -50,6 +52,32 @@ const RecommendationCard = ({ movie }) => {
             <span className="material-symbols-outlined text-on-surface-variant text-sm">bookmark</span>
           </button>
         </div>
+
+        {/* 기능 칩 */}
+        {onChipClick && (
+          <div
+            className="flex flex-wrap gap-2 mt-3"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {ACTION_CHIPS.map(chip => (
+              <button
+                key={chip}
+                onClick={() => onChipClick(chip)}
+                style={{
+                  fontSize: '12px',
+                  border: '0.5px solid rgba(0,0,0,0.15)',
+                  borderRadius: '12px',
+                  padding: '4px 12px',
+                  background: 'transparent',
+                  cursor: 'pointer',
+                  color: 'var(--color-on-surface-variant)',
+                }}
+              >
+                {chip}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

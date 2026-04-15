@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // 페이지 전환 래퍼 — fade + blur 효과
-export function PageTransition({ children }) {
+export function PageTransition({ children, className = '' }) {
   return (
     <motion.div
+      className={className}
       initial={{ opacity: 0, filter: 'blur(8px)' }}
       animate={{ opacity: 1, filter: 'blur(0px)' }}
       exit={{ opacity: 0, filter: 'blur(8px)' }}

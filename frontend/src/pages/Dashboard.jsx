@@ -101,7 +101,8 @@ const Dashboard = () => {
   );
 
   return (
-    <PageTransition>
+    <PageTransition className="h-full">
+      <div className="h-full overflow-y-auto px-6 md:px-12 py-8">
       <div className="max-w-7xl mx-auto pb-12">
 
         {/* ── 히어로: 중앙 CTA ─────────────────────────── */}
@@ -301,6 +302,7 @@ const Dashboard = () => {
           )}
         </section>
 
+      </div>
       </div>
     </PageTransition>
   );

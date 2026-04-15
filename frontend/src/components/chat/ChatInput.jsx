@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-const ChatInput = ({ onSend, isLoading }) => {
+const ChatInput = ({ onSend, isLoading, placeholder = "Tell me what you're craving..." }) => {
   const [text, setText] = useState('');
-  const suggestions = ["More like this", "Slower pace", "Analyze my mood", "Surprise me"];
 
   const handleSend = () => {
     if (!text.trim() || isLoading) return;
@@ -18,32 +17,30 @@ const ChatInput = ({ onSend, isLoading }) => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-t from-background via-background/90 to-transparent pt-10 pb-8 px-6">
-      <div className="max-w-3xl mx-auto space-y-4">
-        {/* Suggestion Chips */}
-        <div className="flex flex-wrap gap-2 justify-center">
-          {suggestions.map(chip => (
-            <button
-              key={chip}
-              onClick={() => onSend?.(chip)}
-              disabled={isLoading}
-              className="px-4 py-1.5 rounded-full border border-outline-variant/20 bg-surface-container-lowest text-xs font-semibold text-on-surface-variant hover:border-primary/30 hover:text-primary transition-all disabled:opacity-40"
-            >
-              {chip}
-            </button>
-          ))}
-        </div>
-
+    <div
+      className="w-full"
+      style={{
+        background: 'var(--color-background)',
+        padding: '8px 12px 12px',
+      }}
+    >
+      <div className="max-w-3xl mx-auto">
         {/* Main Input Bar */}
         <div className="relative group">
           <div className="absolute inset-0 bg-primary/5 blur-2xl rounded-full opacity-0 group-focus-within:opacity-100 transition-opacity" />
-          <div className="relative flex items-center bg-surface-container-lowest rounded-full p-2 cinematic-shadow" style={{ border: '1px solid color-mix(in srgb, var(--color-primary) 10%, transparent)' }}>
+          <div
+            className="relative flex items-center p-2 cinematic-shadow chat-input-box"
+            style={{
+              borderRadius: '24px',
+              background: 'var(--color-background)',
+            }}
+          >
             <button className="p-3 text-on-surface-variant hover:text-primary transition-colors">
               <span className="material-symbols-outlined">add_circle</span>
             </button>
             <input
               className="flex-1 bg-transparent border-none focus:ring-0 px-2 text-on-surface placeholder:text-on-surface-variant/60 font-medium"
-              placeholder="Tell me what you're craving..."
+              placeholder={placeholder}
               type="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
@@ -59,9 +56,6 @@ const ChatInput = ({ onSend, isLoading }) => {
             </button>
           </div>
         </div>
-        <p className="text-[10px] text-center text-on-surface-variant/40 font-medium tracking-wide">
-          Deeping AI uses curated data to refine your cinematic DNA.
-        </p>
       </div>
     </div>
   );

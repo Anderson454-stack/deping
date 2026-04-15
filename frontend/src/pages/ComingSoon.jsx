@@ -21,8 +21,8 @@ const ComingSoon = () => {
   const meta = SECTION_META[pathname] ?? SECTION_META['/discover'];
 
   return (
-    <PageTransition>
-      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center min-h-[60vh] text-center px-6 gap-6">
+    <PageTransition className="h-full">
+      <div className="h-full overflow-y-auto flex flex-col items-center justify-center min-h-full text-center px-6 gap-6">
         <div
           className="w-20 h-20 rounded-3xl flex items-center justify-center mb-2"
           style={{ background: 'rgba(142,0,4,0.08)' }}

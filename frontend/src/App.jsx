@@ -29,18 +29,16 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-background text-on-background font-body">
+      <div className="h-screen overflow-hidden flex flex-col bg-background text-on-background font-body">
         {/* 상단 GNB */}
         <TopNavBar onMenuToggle={() => setDrawerOpen((prev) => !prev)} />
 
         {/* 모바일 슬라이드 드로어 */}
         <MobileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
-        {/* 메인 콘텐츠 — 전체 너비 */}
-        <main className="pt-[68px] min-h-screen">
-          <div className="px-6 md:px-12 py-8">
-            <AnimatedRoutes />
-          </div>
+        {/* 메인 콘텐츠 — 각 페이지가 자체 스크롤/패딩 관리 */}
+        <main className="flex-1 overflow-hidden pt-[68px]">
+          <AnimatedRoutes />
         </main>
       </div>
     </Router>

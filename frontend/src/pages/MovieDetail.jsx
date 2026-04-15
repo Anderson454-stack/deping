@@ -79,7 +79,8 @@ const MovieDetail = () => {
   }
 
   return (
-    <PageTransition>
+    <PageTransition className="h-full">
+      <div className="h-full overflow-y-auto">
       <div className="max-w-7xl mx-auto py-12 px-6">
         <div className="flex flex-col lg:flex-row gap-12">
 
@@ -220,6 +221,7 @@ const MovieDetail = () => {
           </div>
 
         </div>
+      </div>
       </div>
     </PageTransition>
   );
