@@ -82,18 +82,19 @@ const SYSTEM_PROMPT = `당신은 Deping의 AI 영화 취향 파악 에이전트�
 export async function chatWithAgent({ userMessage, conversationHistory, currentProfile, turn }) {
   console.log('[Deping] 에이전트 호출:', { userMessage, turn });
 
-  // 끝에 슬래시 정규화 후 표준 Azure OpenAI URL 조합
-  const base = ENDPOINT.endsWith('/') ? ENDPOINT.slice(0, -1) : ENDPOINT;
-  const url = `${base}/openai/deployments/${DEPLOY}/chat/completions?api-version=${API_VER}`;
+  // ENDPOINT = https://.../openai/v1/chat/completions (전체 경로)
+  // Azure AI Foundry 방식: api-version 없이, Bearer 인증, body에 model 명시
+  const url = ENDPOINT;
   console.log('[Deping] 호출 URL:', url);
 
   const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'api-key': API_KEY,
+      'Authorization': `Bearer ${API_KEY}`,
     },
     body: JSON.stringify({
+      model: DEPLOY,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         ...conversationHistory,
