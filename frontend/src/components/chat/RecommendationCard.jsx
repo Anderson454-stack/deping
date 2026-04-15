@@ -6,7 +6,7 @@ const RecommendationCard = ({ movie }) => {
 
   return (
     <div
-      onClick={() => navigate(`/movie/${movie.id ?? 1}`)}
+      onClick={() => navigate(`/movie/${movie.tmdb_id ?? movie.id ?? 1}`, { state: { movie } })}
       className="ml-12 mt-4 grid grid-cols-1 md:grid-cols-2 overflow-hidden bg-surface-container-lowest rounded-xl cinematic-shadow group transition-all hover:scale-[1.02] max-w-xl cursor-pointer"
     >
       <div className="h-64 md:h-full relative overflow-hidden">

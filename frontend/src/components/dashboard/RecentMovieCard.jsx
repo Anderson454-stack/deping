@@ -19,7 +19,7 @@ const RecentMovieCard = ({ movie }) => {
 
   return (
     <div 
-      onClick={() => navigate(`/movie/${movie.tmdb_id || movie.id}`)}
+      onClick={() => navigate(`/movie/${movie.tmdb_id || movie.id}`, { state: { movie } })}
       className="group bg-surface-raised p-3 rounded-2xl cinematic-shadow cursor-pointer transition-all hover:scale-[1.02]"
     >
       <div className="relative aspect-[2/3] overflow-hidden rounded-xl mb-3">

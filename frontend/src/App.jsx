@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import TopNavBar from './components/layout/TopNavBar';
-import SideNavBar from './components/layout/SideNavBar';
-import MobileBottomNav from './components/layout/MobileBottomNav';
+import MobileDrawer from './components/layout/MobileDrawer';
 import Dashboard from './pages/Dashboard';
 import ChatGuide from './pages/ChatGuide';
 import MovieDetail from './pages/MovieDetail';
+import ComingSoon from './pages/ComingSoon';
 import './App.css';
 
 function AnimatedRoutes() {
@@ -14,33 +14,34 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/chat" element={<ChatGuide />} />
+        <Route path="/"           element={<Dashboard />} />
+        <Route path="/chat"       element={<ChatGuide />} />
         <Route path="/movie/:id?" element={<MovieDetail />} />
+        <Route path="/discover"   element={<ComingSoon />} />
+        <Route path="/journal"    element={<ComingSoon />} />
       </Routes>
     </AnimatePresence>
   );
 }
 
 function App() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   return (
     <Router>
       <div className="min-h-screen bg-background text-on-background font-body">
-        {/* 상단 네비게이션 */}
-        <TopNavBar />
+        {/* 상단 GNB */}
+        <TopNavBar onMenuToggle={() => setDrawerOpen((prev) => !prev)} />
 
-        {/* 사이드바 (데스크톱 전용) */}
-        <SideNavBar />
+        {/* 모바일 슬라이드 드로어 */}
+        <MobileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
-        {/* 메인 컨텐츠 영역 */}
-        <main className="lg:pl-64 pt-16 min-h-screen pb-24 lg:pb-12">
+        {/* 메인 콘텐츠 — 전체 너비 */}
+        <main className="pt-[68px] min-h-screen">
           <div className="px-6 md:px-12 py-8">
             <AnimatedRoutes />
           </div>
         </main>
-
-        {/* 하단 네비게이션 (모바일 전용) */}
-        <MobileBottomNav />
       </div>
     </Router>
   );

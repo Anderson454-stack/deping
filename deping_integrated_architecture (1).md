@@ -74,7 +74,7 @@
 | LLM (Agent 1, 3) | Azure OpenAI GPT-4.1 | Function Calling, CoT 추론 |
 | 임베딩 | Azure OpenAI text-embedding-3-small | 1536차원, 영화 줄거리/리뷰 벡터화 |
 | 검색 엔진 | Azure AI Search | 벡터 + 시맨틱 하이브리드, 필터링 |
-| 데이터 저장 | Azure Blob Storage | 영화 메타데이터, 리뷰 데이터 |
+| 데이터 저장 | Azure Blob Storage | 영화 메타데이터 |
 | 영화 API | TMDB API (외부) | 포스터, 예고편, 평점, 출연진 |
 | 오케스트레이션 | Python | 에이전트 간 파이프라인 연결 |
 
