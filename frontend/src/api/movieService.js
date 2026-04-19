@@ -4,7 +4,7 @@
 // - getMovieDetail: 실 API → 실패 시 하드코딩 3편 fallback (상세 페이지 전용)
 // ─────────────────────────────────────────────────────────────
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+import { buildApiUrl } from './baseUrl';
 
 // ── Mock (상세 페이지 fallback 전용 — 목록 API에는 사용 안 함) ─
 
@@ -24,7 +24,7 @@ const findMovieFallback = (id) => MOCK_MOVIES[id] ?? MOCK_MOVIES[157336];
 // ── 공통 fetch 유틸 ────────────────────────────────────────────
 
 async function apiFetch(path) {
-  const res = await fetch(`${API_BASE}${path}`, { signal: AbortSignal.timeout(6000) });
+  const res = await fetch(buildApiUrl(path), { signal: AbortSignal.timeout(6000) });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }
@@ -51,10 +51,15 @@ export const movieService = {
    */
   getBoxOffice: async () => {
     try {
-      const data = await apiFetch('/api/boxoffice/daily');
+      // 타임아웃 10s — 백엔드가 캐시 만료 시 KOBIS 직접 호출할 수 있으므로
+      const res = await fetch(buildApiUrl('/api/boxoffice/daily'), {
+        signal: AbortSignal.timeout(10000),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
       return { data: Array.isArray(data) ? data : [] };
     } catch (err) {
-      console.error('getBoxOffice 실패:', err);
+      console.warn('getBoxOffice 실패:', err.message);
       return { data: [] };
     }
   },
@@ -88,4 +93,61 @@ export const movieService = {
       return { data: [] };
     }
   },
+
+  /**
+   * 월별 테마 영화
+   * 실 API(/api/movies/theme) → 실패 시 빈 구조 반환
+   */
+  getMonthlyTheme: async (month) => {
+    try {
+      const suffix = typeof month === 'number' ? `?month=${month}` : '';
+      const data = await apiFetch(`/api/movies/theme${suffix}`);
+      return {
+        data: {
+          month: data?.month ?? null,
+          title: data?.title ?? null,
+          message: data?.message ?? null,
+          emoji: data?.emoji ?? null,
+          movies: Array.isArray(data?.movies) ? data.movies : [],
+        },
+      };
+    } catch (err) {
+      console.error('getMonthlyTheme 실패:', err);
+      return {
+        data: { month: month ?? null, title: null, message: null, emoji: null, movies: [] },
+      };
+    }
+  },
 };
+
+// ── 온보딩 카드 선택용 fetch 함수 ─────────────────────────────
+
+export async function fetchMovieCards() {
+  try {
+    const data = await apiFetch('/api/movies/cards');
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.error('fetchMovieCards 실패:', err);
+    return [];
+  }
+}
+
+export async function fetchDirectorCards() {
+  try {
+    const data = await apiFetch('/api/directors/cards');
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.error('fetchDirectorCards 실패:', err);
+    return [];
+  }
+}
+
+export async function fetchActorCards() {
+  try {
+    const data = await apiFetch('/api/actors/cards');
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.error('fetchActorCards 실패:', err);
+    return [];
+  }
+}

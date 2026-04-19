@@ -1,0 +1,30 @@
+# ── 환경변수 (API 키 포함 — 절대 커밋 금지) ──────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# ── Node.js ───────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# ── 데이터 / 노트북 출력 ──────────────────────────────────
+notebooks/data/raw/
+notebooks/data/processed/*.json
+*.xlsx
+
+# ── 에디터 ────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.sw?

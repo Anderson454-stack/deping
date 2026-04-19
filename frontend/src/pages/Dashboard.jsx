@@ -24,13 +24,18 @@ function tagsToKeywords(tags) {
 
 // 현재 DNA 태그 (ViewingDNA 컴포넌트와 동일한 값)
 const CURRENT_DNA_TAGS = ['Noir Minimalism', '90s Hong Kong', 'Surrealist Narrative', 'Technicolor Epics'];
+const THEME_PREVIEW_MONTH = 5;
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const { recentHistory } = useRecommendationHistory();
+  const currentMonth = new Date().getMonth() + 1;
   const [boxOffice, setBoxOffice] = useState([]);
+  const [boxOfficeLoading, setBoxOfficeLoading] = useState(true);
   const [featured, setFeatured] = useState([]);
   const [featuredLoading, setFeaturedLoading] = useState(true);
+  const [monthlyTheme, setMonthlyTheme] = useState(null);
+  const [themeLoading, setThemeLoading] = useState(true);
   const [community, setCommunity] = useState([]);
   const [communityLoading, setCommunityLoading] = useState(true);
 
@@ -38,9 +43,11 @@ const Dashboard = () => {
 
   // ── 박스오피스 (마운트 1회) ───────────────────────────────
   useEffect(() => {
+    setBoxOfficeLoading(true);
     movieService.getBoxOffice()
       .then(res => setBoxOffice(Array.isArray(res.data) ? res.data : []))
-      .catch(() => setBoxOffice([]));
+      .catch(() => setBoxOffice([]))
+      .finally(() => setBoxOfficeLoading(false));
   }, []);
 
   // ── 오늘의 추천: 마운트 + 15분마다 갱신 ─────────────────
@@ -57,6 +64,33 @@ const Dashboard = () => {
     const interval = setInterval(fetchFeatured, 15 * 60 * 1000);
     return () => clearInterval(interval);
   }, [fetchFeatured]);
+
+  useEffect(() => {
+    setThemeLoading(true);
+    movieService.getMonthlyTheme(currentMonth)
+      .then(async (res) => {
+        const theme = res.data;
+        if (theme && Array.isArray(theme.movies) && theme.movies.length > 0) {
+          setMonthlyTheme(theme);
+          return;
+        }
+
+        if (currentMonth === THEME_PREVIEW_MONTH) {
+          setMonthlyTheme(null);
+          return;
+        }
+
+        const previewRes = await movieService.getMonthlyTheme(THEME_PREVIEW_MONTH);
+        const previewTheme = previewRes.data;
+        setMonthlyTheme(
+          previewTheme && Array.isArray(previewTheme.movies) && previewTheme.movies.length > 0
+            ? previewTheme
+            : null
+        );
+      })
+      .catch(() => setMonthlyTheme(null))
+      .finally(() => setThemeLoading(false));
+  }, [currentMonth]);
 
   // ── Community DNA: DNA 태그 기반 키워드 추천 ────────────
   useEffect(() => {
@@ -85,6 +119,46 @@ const Dashboard = () => {
     title_ko: m.title_ko ?? m.title,
     savedAt: m.savedAt ?? new Date().toISOString(),
   });
+
+  const renderMovieGrid = (movies, itemClassName = 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4') => (
+    <StaggerList className={itemClassName}>
+      {movies.map((movie) => (
+        <StaggerListItem key={movie.tmdb_id ?? movie.id}>
+          <div
+            onClick={() => navigate(`/movie/${movie.tmdb_id ?? movie.id}`, { state: { movie } })}
+            className="group cursor-pointer rounded-2xl overflow-hidden bg-surface-container-low cinematic-shadow hover:scale-[1.03] transition-all duration-300"
+          >
+            <div className="relative aspect-[2/3]">
+              {movie.poster_url ? (
+                <img src={movie.poster_url} alt={movie.title_ko ?? movie.title} className="w-full h-full object-cover" />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-surface-container-highest">
+                  <span className="material-symbols-outlined text-outline-variant text-4xl">movie</span>
+                </div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+            <div className="px-3 py-2.5">
+              <p className="text-sm font-bold text-on-surface truncate group-hover:text-primary transition-colors">
+                {movie.title_ko ?? movie.title}
+              </p>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                {movie.year && (
+                  <span className="text-[10px] text-on-surface-variant/60">{movie.year}</span>
+                )}
+                {movie.vote_average && (
+                  <>
+                    <span className="text-on-surface-variant/30 text-[10px]">·</span>
+                    <span className="text-[10px] text-primary font-bold">★ {Number(movie.vote_average).toFixed(1)}</span>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </StaggerListItem>
+      ))}
+    </StaggerList>
+  );
 
   const SectionSpinner = () => (
     <div className="flex items-center justify-center py-16 gap-2">
@@ -225,7 +299,7 @@ const Dashboard = () => {
         </section>
 
         {/* ── 박스오피스 캐러셀 ─────────────────────────── */}
-        {boxOffice.length > 0 && (
+        {(boxOfficeLoading || boxOffice.length > 0) && (
           <section className="mt-16 pt-16" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
             <div className="flex items-center justify-between mb-10">
               <div>
@@ -234,9 +308,43 @@ const Dashboard = () => {
                   Current Box Office · Daily Updated
                 </p>
               </div>
-              <span className="text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-widest">KOBIS Realtime</span>
+              <span className="text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-widest">
+                {boxOffice[0]?.source === 'tmdb' ? '실시간 인기' : 'KOBIS Realtime'}
+              </span>
             </div>
-            <BoxOfficeCarousel movies={boxOffice} />
+
+            {boxOfficeLoading ? (
+              /* 스켈레톤 */
+              <div className="flex gap-6 overflow-hidden px-8">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="flex-none w-[240px] sm:w-[260px] px-3"
+                    style={{ opacity: 1 - i * 0.15 }}
+                  >
+                    <div
+                      className="rounded-2xl overflow-hidden"
+                      style={{ background: 'var(--color-surface-container-low)' }}
+                    >
+                      <div
+                        className="aspect-[2/3] animate-pulse"
+                        style={{ background: 'var(--color-surface-raised)' }}
+                      />
+                      <div className="px-4 pt-3 pb-4 flex flex-col gap-2">
+                        <div className="h-3 rounded-full animate-pulse w-3/4" style={{ background: 'var(--color-surface-raised)' }} />
+                        <div className="h-2.5 rounded-full animate-pulse w-1/2" style={{ background: 'var(--color-surface-raised)', opacity: 0.6 }} />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : boxOffice.length === 0 ? (
+              <p className="text-sm text-on-surface-variant/40 text-center py-12">
+                잠시 후 다시 시도해주세요.
+              </p>
+            ) : (
+              <BoxOfficeCarousel movies={boxOffice} />
+            )}
           </section>
         )}
 
@@ -246,59 +354,56 @@ const Dashboard = () => {
             <div>
               <h2 className="text-2xl font-bold italic tracking-tight">디핑이 직접 선별한 영화</h2>
               <p className="text-on-surface-variant text-[10px] mt-1 font-bold uppercase tracking-widest opacity-40">
-                Curated From Our Cinema Archive · Refreshes Every 15 min
+                {monthlyTheme ? 'Monthly Theme Curated By Deeping' : 'Curated From Our Cinema Archive · Refreshes Every 15 min'}
               </p>
             </div>
-            <button
-              onClick={fetchFeatured}
-              disabled={featuredLoading}
-              className="flex items-center gap-1.5 text-[11px] font-bold text-on-surface-variant/60 hover:text-primary transition-colors disabled:opacity-40"
-            >
-              <span className={`material-symbols-outlined text-base ${featuredLoading ? 'animate-spin' : ''}`}>refresh</span>
-              새로고침
-            </button>
+            {!monthlyTheme && (
+              <button
+                onClick={fetchFeatured}
+                disabled={featuredLoading}
+                className="flex items-center gap-1.5 text-[11px] font-bold text-on-surface-variant/60 hover:text-primary transition-colors disabled:opacity-40"
+              >
+                <span className={`material-symbols-outlined text-base ${featuredLoading ? 'animate-spin' : ''}`}>refresh</span>
+                새로고침
+              </button>
+            )}
           </div>
 
-          {featuredLoading ? (
+          {themeLoading || (!monthlyTheme && featuredLoading) ? (
             <SectionSpinner />
+          ) : monthlyTheme ? (
+            <>
+              <div
+                className="mb-6 px-6 py-5 rounded-3xl"
+                style={{
+                  background: 'var(--color-surface-raised)',
+                  boxShadow: 'var(--shadow-cinematic)',
+                }}
+              >
+                <div className="flex items-center gap-2.5 mb-2">
+                  <span className="text-2xl leading-none" aria-hidden="true">{monthlyTheme.emoji ?? '🎠'}</span>
+                  <span
+                    className="text-[11px] font-bold uppercase tracking-[0.08em]"
+                    style={{ color: 'var(--color-primary)' }}
+                  >
+                    {monthlyTheme.title}
+                  </span>
+                </div>
+                <div>
+                  <p
+                    className="text-lg font-semibold leading-relaxed"
+                    style={{ color: 'var(--color-text-primary)' }}
+                  >
+                    {monthlyTheme.message}
+                  </p>
+                </div>
+              </div>
+              {renderMovieGrid(monthlyTheme.movies)}
+            </>
           ) : featured.length === 0 ? (
             <EmptyNotice text="백엔드 서버에 연결할 수 없습니다. 서버를 실행 후 새로고침 해주세요." />
           ) : (
-            <StaggerList className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {featured.slice(0, 8).map((movie) => (
-                <StaggerListItem key={movie.tmdb_id}>
-                  <div
-                    onClick={() => navigate(`/movie/${movie.tmdb_id}`, { state: { movie } })}
-                    className="group cursor-pointer rounded-2xl overflow-hidden bg-surface-container-low cinematic-shadow hover:scale-[1.03] transition-all duration-300"
-                  >
-                    <div className="relative aspect-[2/3]">
-                      {movie.poster_url ? (
-                        <img src={movie.poster_url} alt={movie.title} className="w-full h-full object-cover" />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-surface-container-highest">
-                          <span className="material-symbols-outlined text-outline-variant text-4xl">movie</span>
-                        </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                    <div className="px-3 py-2.5">
-                      <p className="text-sm font-bold text-on-surface truncate group-hover:text-primary transition-colors">
-                        {movie.title}
-                      </p>
-                      <div className="flex items-center gap-1.5 mt-0.5">
-                        <span className="text-[10px] text-on-surface-variant/60">{movie.year}</span>
-                        {movie.vote_average && (
-                          <>
-                            <span className="text-on-surface-variant/30 text-[10px]">·</span>
-                            <span className="text-[10px] text-primary font-bold">★ {Number(movie.vote_average).toFixed(1)}</span>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </StaggerListItem>
-              ))}
-            </StaggerList>
+            renderMovieGrid(featured.slice(0, 8))
           )}
         </section>
 

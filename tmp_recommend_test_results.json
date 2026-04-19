@@ -1,0 +1,725 @@
+{
+  "cases": [
+    {
+      "name": "Case 1 - SF + reference",
+      "profile": {
+        "genres": [
+          "SF"
+        ],
+        "complexity": "low",
+        "patience": "medium",
+        "reference": [
+          "Interstellar"
+        ]
+      },
+      "candidate_count": 15,
+      "candidate_ids": [
+        "693134",
+        "945961",
+        "635996",
+        "524434",
+        "497698",
+        "580489",
+        "520763",
+        "399566",
+        "586047",
+        "550988",
+        "507086",
+        "615173",
+        "505642",
+        "634649",
+        "601796"
+      ],
+      "selected_ids": [
+        "635996",
+        "693134",
+        "550988"
+      ],
+      "meta": {
+        "candidate_count": 15,
+        "selected_ids": [
+          "635996",
+          "693134",
+          "550988"
+        ],
+        "llm_latency_ms": 8199,
+        "token_usage": {
+          "prompt_tokens": 2537,
+          "completion_tokens": 379,
+          "total_tokens": 2916
+        },
+        "fallback_used": false
+      },
+      "overall_reasoning": "사용자의 SF 선호와 낮은 복잡도, 중간 인내도를 고려해 감성·스케일·유머 각기 다른 매력을 지닌 세 편을 선정함.",
+      "checks": {
+        "returned_3": true,
+        "all_in_candidates": true,
+        "stable_fields": true,
+        "reasoning_pairs_3": true,
+        "under_10s": true,
+        "null_safe": true
+      },
+      "pass": true,
+      "sample_recommendations": [
+        {
+          "tmdb_id": 635996,
+          "title": "원더랜드",
+          "title_ko": "원더랜드",
+          "poster_url": "https://image.tmdb.org/t/p/w500/7AfZDB9X8iTF6VaacJIj5Lcb1bG.jpg",
+          "overview": "죽은 사람을 인공지능으로 복원하는 원더랜드 서비스가 일상이 된 세상, 어린 딸에게 자신의 죽음을 숨기기 위해 원더랜드 서비스를 의뢰한 바이리와 사고로 누워있는 남자친구 태주를 원더랜드에서 우주인으로 복원해 행복한 일상을 나누는 정인. 사람들은 더 이상 그리워하거나 슬퍼하지 않는 삶을 선택할 수 있게 된다. 어느 날 의식불명 상태의 태주가 기적처럼 깨어나 곁으로 돌아오고 다시 마주하게 된 모든 것이 낯설고 혼란스러운 태주와 그런 그와 함께하는 현실에 정인의 마음에는 조금씩 균열이 찾아온다. 한편, 원더랜드에서 발굴 현장을 누비는 고고학자로 복원된 바이리는 딸과의 영상통화를 통해 친구 같은 엄마가 되기 위해 노력하지만 갑작스럽게 서비스가 종료되면서 예상치 못한 오류가 발생하는데….",
+          "vote_average": 7.028,
+          "director": "김태용",
+          "actors": [],
+          "year": 2024,
+          "genres": [
+            "SF",
+            "드라마"
+          ],
+          "rating_imdb": 7.028,
+          "reason": "감정적이면서 이해하기 쉬운 SF 설정",
+          "overview_ko": "죽은 이를 인공지능으로 복원하는 서비스가 일상이 된 세상. 사랑하는 이를 잃은 사람들이 가상 공간에서 다시 만나는 이야기를 그린다.",
+          "cognitive_match": "낮은 복잡도와 중간 인내 수준에 맞는 감성 SF"
+        },
+        {
+          "tmdb_id": 693134,
+          "title": "듄: 파트2",
+          "title_ko": "듄: 파트2",
+          "poster_url": "https://image.tmdb.org/t/p/w500/8AsDR2o5AC3V8Jmj6JH6cpta7dz.jpg",
+          "overview": "황제의 모략으로 멸문한 가문의 유일한 후계자 폴. 어머니 레이디 제시카와 간신히 목숨만 부지한 채 사막으로 도망친다. 그곳에서 만난 반란군들과 숨어 지내다 그들과 함께 황제의 모든 것을 파괴할 전투를 준비한다. 한편 반란군들의 기세가 높아질수록 불안해진 황제와 귀족 가문은 잔혹한 암살자 페이드 로타를 보내 반란군을 몰살하려 하는데…",
+          "vote_average": 8.131,
+          "director": "드니 빌뇌브",
+          "actors": [],
+          "year": 2024,
+          "genres": [
+            "SF",
+            "모험"
+          ],
+          "rating_imdb": 8.131,
+          "reason": "웅장한 세계관과 명확한 서사",
+          "overview_ko": "사막 행성에서 살아남은 폴이 반란군과 함께 제국에 맞서는 여정을 그린다. 거대한 스케일의 모험과 운명적 서사가 펼쳐진다.",
+          "cognitive_match": "Interstellar의 스케일과 유사한 SF 모험"
+        },
+        {
+          "tmdb_id": 550988,
+          "title": "프리 가이",
+          "title_ko": "프리 가이",
+          "poster_url": "https://image.tmdb.org/t/p/w500/sEYyQ4lW43jg77yTiTSRUNVdtMc.jpg",
+          "overview": "평범한 직장, 절친 그리고 한 잔의 커피.  평화로운 일상 속 때론 총격전과 날강도가 나타나는 버라이어티한 ‘프리시티’에 살고 있는 ‘가이’. 그에겐 뭐 하나 부족한 것이 없었다. 우연히 마주친 그녀에게 한눈에 반하기 전까지는…  갖은 노력 끝에 다시 만난 그녀는 ‘가이’가 비디오 게임 ‘프리시티’에 사는 배경 캐릭터이고, 이 세상은 곧 파괴될 거라 경고한다. 혼란에 빠진 ‘가이’ 그러나 그는 ‘프리시티’의 파괴를 막기 위해 더 이상 배경 캐릭터가 아닌, 히어로가 되기로 결심한다.",
+          "vote_average": 7.453,
+          "director": "숀 레비",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "코미디",
+            "모험",
+            "SF"
+          ],
+          "rating_imdb": 7.453,
+          "reason": "가볍고 유머러스한 SF 세계",
+          "overview_ko": "게임 속 캐릭터가 자신이 가상 세계에 살고 있음을 깨닫는다. 유쾌한 액션과 따뜻한 메시지가 어우러진 SF 코미디다.",
+          "cognitive_match": "낮은 복잡도 선호자에게 적합한 밝은 톤의 SF"
+        }
+      ],
+      "reasoning_log": [
+        {
+          "id": "635996",
+          "reason": "감정적이면서 이해하기 쉬운 SF 설정",
+          "cognitive_match": "낮은 복잡도와 중간 인내 수준에 맞는 감성 SF"
+        },
+        {
+          "id": "693134",
+          "reason": "웅장한 세계관과 명확한 서사",
+          "cognitive_match": "Interstellar의 스케일과 유사한 SF 모험"
+        },
+        {
+          "id": "550988",
+          "reason": "가볍고 유머러스한 SF 세계",
+          "cognitive_match": "낮은 복잡도 선호자에게 적합한 밝은 톤의 SF"
+        }
+      ],
+      "elapsed_ms_client": 9395
+    },
+    {
+      "name": "Case 2 - romance comedy",
+      "profile": {
+        "genres": [
+          "???",
+          "???"
+        ],
+        "mood": "relaxed",
+        "tone": "light"
+      },
+      "candidate_count": 15,
+      "candidate_ids": [
+        "607844",
+        "524434",
+        "497698",
+        "385128",
+        "623135",
+        "635302",
+        "580489",
+        "695199",
+        "337404",
+        "566525",
+        "602463",
+        "644714",
+        "370172",
+        "615643",
+        "654739"
+      ],
+      "selected_ids": [
+        "623135",
+        "337404",
+        "615643"
+      ],
+      "meta": {
+        "candidate_count": 15,
+        "selected_ids": [
+          "623135",
+          "337404",
+          "615643"
+        ],
+        "llm_latency_ms": 9989,
+        "token_usage": {
+          "prompt_tokens": 2534,
+          "completion_tokens": 419,
+          "total_tokens": 2953
+        },
+        "fallback_used": false
+      },
+      "overall_reasoning": "가벼운 톤과 편안한 감정선을 선호하는 프로필에 맞춰 코미디, 스타일리시한 오락, 따뜻한 드라마를 고르게 선정했다.",
+      "checks": {
+        "returned_3": true,
+        "all_in_candidates": true,
+        "stable_fields": true,
+        "reasoning_pairs_3": true,
+        "under_10s": false,
+        "null_safe": true
+      },
+      "pass": false,
+      "sample_recommendations": [
+        {
+          "tmdb_id": 623135,
+          "title": "싱크홀",
+          "title_ko": "싱크홀",
+          "poster_url": "https://image.tmdb.org/t/p/w500/nEslKzaq3LKuQcDTNODzwh149Qh.jpg",
+          "overview": "서울 입성과 함께 내 집 마련의 꿈을 이룬 가장 동원은 이사 첫날부터 프로 참견러 만수와 사사건건 부딪힌다. 동원은 자가취득을 기념하며 직장 동료들을 집들이에 초대하지만 행복한 단꿈도 잠시, 순식간에 빌라 전체가 땅 속으로 떨어지고 만다. 지하 500m 싱크홀 속으로 떨어진 이들은 과연 무사히 빠져나갈 수 있을까?",
+          "vote_average": 6.884,
+          "director": "김지훈",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "코미디",
+            "드라마"
+          ],
+          "rating_imdb": 6.884,
+          "reason": "가벼운 유머와 일상적 상황이 어우러진 재난 코미디",
+          "overview_ko": "평범한 가장이 새 집에서 뜻밖의 싱크홀 사고를 겪으며 벌어지는 소동을 그린다. 코믹한 인물들의 대처 속에서 웃음과 따뜻함이 공존한다.",
+          "cognitive_match": "편안한 분위기와 가벼운 웃음을 원하는 기분에 부합"
+        },
+        {
+          "tmdb_id": 337404,
+          "title": "크루엘라",
+          "title_ko": "크루엘라",
+          "poster_url": "https://image.tmdb.org/t/p/w500/89y66LHU3T3txFALo2nwyBfYpWA.jpg",
+          "overview": "재능은 있지만 밑바닥 인생을 살던 에스텔라는 우여곡절 끝에 런던에 오게 된다. 그곳에서 운명처럼 재스퍼와 호레이스를 만난 에스텔라는 뛰어난 패션 감각을 이용해 완벽한 변장과 빠른 손놀림으로 런던 거리를 싹쓸이한다. 도둑질이 지겹게 느껴질 때 쯤, 꿈에 그리던 리버티 백화점에 들어가게 된 에스텔라. 그곳에서 런던 패션계를 꽉 쥐고 있는 남작 부인을 만나 충격적 사건을 겪게 되며, 에스텔라는 런던 패션계를 발칵 뒤집을 파격 아이콘 크루엘라로 새롭게 태어나게 되는데...",
+          "vote_average": 7.973,
+          "director": "크레이그 길레스피",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "코미디",
+            "범죄",
+            "모험"
+          ],
+          "rating_imdb": 7.973,
+          "reason": "스타일리시하고 유쾌한 범죄 코미디",
+          "overview_ko": "패션 감각이 뛰어난 에스텔라가 런던에서 자신만의 스타일로 세상에 도전한다. 재치와 개성이 돋보이는 성장과 복수의 이야기다.",
+          "cognitive_match": "밝고 경쾌한 톤의 오락적 요소와 잘 맞음"
+        },
+        {
+          "tmdb_id": 615643,
+          "title": "미나리",
+          "title_ko": "미나리",
+          "poster_url": "https://image.tmdb.org/t/p/w500/ltS2iKKvvBi7ZXWPRZSZBGmC9Gr.jpg",
+          "overview": "낯선 미국에서 병아리를 감별하며 생계를 이어가던 제이콥과 모니카. 딸 앤과 아들 데이빗에게 아버지로서 뭔가 해내는 모습을 보여주고 싶은 제이콥은 아칸소로 이주해 자신의 농장을 가꾼다. 모니카는 낡은 컨테이너에서 생활하며 농장 일에만 몰두하는 제이콥이 못마땅하지만 그저 그의 결정을 지켜볼 뿐이다. 아칸소에서의 적적하고 고된 삶에 지친 모니카는 엄마 순자를 미국으로 모신다. 한약, 멸치, 미나리 씨 등을 잔뜩 챙겨온 순자는 여느 할머니와 달리 요리도 하지 않고 프로레슬링을 즐겨 본다. 앤과 데이빗은 그런 할머니가 낯설지만, 못된 장난까지 사랑으로 포용하는 할머니와 점점 가까워진다.",
+          "vote_average": 7.33,
+          "director": "정이삭",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "드라마"
+          ],
+          "rating_imdb": 7.33,
+          "reason": "잔잔하고 따뜻한 가족 드라마",
+          "overview_ko": "미국으로 이주한 한 가족이 새로운 삶을 일구며 서로를 이해해 가는 과정을 그린다. 소박한 일상 속 희망과 가족애가 따뜻하게 전해진다.",
+          "cognitive_match": "편안한 감정선과 여유로운 흐름이 ‘relaxed’ 무드에 적합"
+        }
+      ],
+      "reasoning_log": [
+        {
+          "id": "623135",
+          "reason": "가벼운 유머와 일상적 상황이 어우러진 재난 코미디",
+          "cognitive_match": "편안한 분위기와 가벼운 웃음을 원하는 기분에 부합"
+        },
+        {
+          "id": "337404",
+          "reason": "스타일리시하고 유쾌한 범죄 코미디",
+          "cognitive_match": "밝고 경쾌한 톤의 오락적 요소와 잘 맞음"
+        },
+        {
+          "id": "615643",
+          "reason": "잔잔하고 따뜻한 가족 드라마",
+          "cognitive_match": "편안한 감정선과 여유로운 흐름이 ‘relaxed’ 무드에 적합"
+        }
+      ],
+      "elapsed_ms_client": 13174
+    },
+    {
+      "name": "Case 3 - action thriller",
+      "profile": {
+        "genres": [
+          "??",
+          "???"
+        ],
+        "patience": "low",
+        "priority": [
+          "visuals"
+        ]
+      },
+      "candidate_count": 15,
+      "candidate_ids": [
+        "607844",
+        "524434",
+        "497698",
+        "385128",
+        "623135",
+        "635302",
+        "580489",
+        "695199",
+        "337404",
+        "566525",
+        "602463",
+        "644714",
+        "370172",
+        "615643",
+        "654739"
+      ],
+      "selected_ids": [
+        "337404",
+        "580489",
+        "607844"
+      ],
+      "meta": {
+        "candidate_count": 15,
+        "selected_ids": [
+          "337404",
+          "580489",
+          "607844"
+        ],
+        "llm_latency_ms": 5492,
+        "token_usage": {
+          "prompt_tokens": 2538,
+          "completion_tokens": 416,
+          "total_tokens": 2954
+        },
+        "fallback_used": false
+      },
+      "overall_reasoning": "사용자의 낮은 인내도와 시각적 우선순위를 고려해 속도감 있고 비주얼 중심의 세 편을 선정함.",
+      "checks": {
+        "returned_3": true,
+        "all_in_candidates": true,
+        "stable_fields": true,
+        "reasoning_pairs_3": true,
+        "under_10s": true,
+        "null_safe": true
+      },
+      "pass": true,
+      "sample_recommendations": [
+        {
+          "tmdb_id": 337404,
+          "title": "크루엘라",
+          "title_ko": "크루엘라",
+          "poster_url": "https://image.tmdb.org/t/p/w500/89y66LHU3T3txFALo2nwyBfYpWA.jpg",
+          "overview": "재능은 있지만 밑바닥 인생을 살던 에스텔라는 우여곡절 끝에 런던에 오게 된다. 그곳에서 운명처럼 재스퍼와 호레이스를 만난 에스텔라는 뛰어난 패션 감각을 이용해 완벽한 변장과 빠른 손놀림으로 런던 거리를 싹쓸이한다. 도둑질이 지겹게 느껴질 때 쯤, 꿈에 그리던 리버티 백화점에 들어가게 된 에스텔라. 그곳에서 런던 패션계를 꽉 쥐고 있는 남작 부인을 만나 충격적 사건을 겪게 되며, 에스텔라는 런던 패션계를 발칵 뒤집을 파격 아이콘 크루엘라로 새롭게 태어나게 되는데...",
+          "vote_average": 7.973,
+          "director": "크레이그 길레스피",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "코미디",
+            "범죄",
+            "모험"
+          ],
+          "rating_imdb": 7.973,
+          "reason": "강렬한 패션 비주얼과 빠른 전개로 시각적 몰입도 높음",
+          "overview_ko": "런던을 배경으로 한 패션과 범죄의 세계에서 에스텔라가 크루엘라로 변모한다. 화려한 의상과 빠른 전개가 돋보이는 스타일리시한 이야기.",
+          "cognitive_match": "낮은 인내도에 맞는 속도감과 화려한 스타일"
+        },
+        {
+          "tmdb_id": 580489,
+          "title": "베놈 2: 렛 데어 비 카니지",
+          "title_ko": "베놈 2: 렛 데어 비 카니지",
+          "poster_url": "https://image.tmdb.org/t/p/w500/fHnKlSp28U648O4vm95z86Jw5tT.jpg",
+          "overview": "‘베놈'과 완벽한 파트너가 된 ‘에디 브록' 앞에 ‘클리터스 캐서디'가 ‘카니지'로 등장, 앞으로 닥칠 대혼돈의 세상을 예고한다. 대혼돈의 시대가 시작되고, 악을 악으로 처단할 것인가?",
+          "vote_average": 6.7,
+          "director": "앤디 서키스",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "SF",
+            "액션",
+            "모험"
+          ],
+          "rating_imdb": 6.7,
+          "reason": "다크한 색감과 액션 중심의 시각적 쾌감이 강함",
+          "overview_ko": "에디 브록과 베놈이 새로운 적 카니지와 맞서며 혼돈의 시대를 맞는다. 강렬한 액션과 시각적 긴장감이 중심이 되는 히어로 영화.",
+          "cognitive_match": "시각적 자극과 단순 명료한 전개로 집중 유지"
+        },
+        {
+          "tmdb_id": 607844,
+          "title": "모가디슈",
+          "title_ko": "모가디슈",
+          "poster_url": "https://image.tmdb.org/t/p/w500/oeu5TgAd0MrHplBIvCFpt9AIEBm.jpg",
+          "overview": "유엔 가입을 위해 다수의 투표권을 지닌 아프리카 대륙에서 열심히 외교 활동을 벌이던 1990년. 소말리아의 수도 모가디슈에서도 남북의 외교전은 불이 붙는다. 한신성 주소말리아 한국 대사와 안기부 출신의 강대진 참사관, 북한의 림용수 대사와 태준기 참사관은 함정을 파거나 거짓 정보를 흘려가며 서로를 견제한다. 한편 소말리아의 상황은 불안하기 그지없다. 부패한 독재정권을 몰아내려는 반군과 정부군의 대치는 1990년 12월 30일 반군이 수도 모가디슈에 입성하면서 내전으로 번진다. 통신은 물론 항공편마저 끊겨 아수라장이 된 모가디슈. 북한 대사관 사람들은 반군의 공격으로 갈 곳을 잃고, 한신성 대사는 도움을 요청한 북한 사람들을 관저로 들이는데...",
+          "vote_average": 7.1,
+          "director": "류승완",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "전쟁",
+            "액션",
+            "스릴러",
+            "드라마",
+            "역사"
+          ],
+          "rating_imdb": 7.1,
+          "reason": "현실적 긴장감과 생생한 전쟁 비주얼로 몰입도 높음",
+          "overview_ko": "소말리아 내전 속에서 남북 외교관들이 생존을 위해 협력한다. 실제 사건을 바탕으로 한 사실적 연출과 긴박한 전개가 돋보인다.",
+          "cognitive_match": "시각적 사실감과 빠른 전개로 인지적 피로 최소화"
+        }
+      ],
+      "reasoning_log": [
+        {
+          "id": "337404",
+          "reason": "강렬한 패션 비주얼과 빠른 전개로 시각적 몰입도 높음",
+          "cognitive_match": "낮은 인내도에 맞는 속도감과 화려한 스타일"
+        },
+        {
+          "id": "580489",
+          "reason": "다크한 색감과 액션 중심의 시각적 쾌감이 강함",
+          "cognitive_match": "시각적 자극과 단순 명료한 전개로 집중 유지"
+        },
+        {
+          "id": "607844",
+          "reason": "현실적 긴장감과 생생한 전쟁 비주얼로 몰입도 높음",
+          "cognitive_match": "시각적 사실감과 빠른 전개로 인지적 피로 최소화"
+        }
+      ],
+      "elapsed_ms_client": 8564
+    },
+    {
+      "name": "Case 4 - slow drama",
+      "profile": {
+        "genres": [
+          "???"
+        ],
+        "patience": "high",
+        "complexity": "high",
+        "priority": [
+          "story"
+        ]
+      },
+      "candidate_count": 15,
+      "candidate_ids": [
+        "607844",
+        "524434",
+        "497698",
+        "385128",
+        "623135",
+        "635302",
+        "580489",
+        "695199",
+        "337404",
+        "566525",
+        "602463",
+        "644714",
+        "370172",
+        "615643",
+        "654739"
+      ],
+      "selected_ids": [
+        "607844",
+        "337404",
+        "615643"
+      ],
+      "meta": {
+        "candidate_count": 15,
+        "selected_ids": [
+          "607844",
+          "337404",
+          "615643"
+        ],
+        "llm_latency_ms": 11395,
+        "token_usage": {
+          "prompt_tokens": 2541,
+          "completion_tokens": 379,
+          "total_tokens": 2920
+        },
+        "fallback_used": false
+      },
+      "overall_reasoning": "이 세 작품은 모두 서사 중심이며, 인내심과 복잡한 감정선을 즐기는 관객에게 어울린다.",
+      "checks": {
+        "returned_3": true,
+        "all_in_candidates": true,
+        "stable_fields": true,
+        "reasoning_pairs_3": true,
+        "under_10s": false,
+        "null_safe": true
+      },
+      "pass": false,
+      "sample_recommendations": [
+        {
+          "tmdb_id": 607844,
+          "title": "모가디슈",
+          "title_ko": "모가디슈",
+          "poster_url": "https://image.tmdb.org/t/p/w500/oeu5TgAd0MrHplBIvCFpt9AIEBm.jpg",
+          "overview": "유엔 가입을 위해 다수의 투표권을 지닌 아프리카 대륙에서 열심히 외교 활동을 벌이던 1990년. 소말리아의 수도 모가디슈에서도 남북의 외교전은 불이 붙는다. 한신성 주소말리아 한국 대사와 안기부 출신의 강대진 참사관, 북한의 림용수 대사와 태준기 참사관은 함정을 파거나 거짓 정보를 흘려가며 서로를 견제한다. 한편 소말리아의 상황은 불안하기 그지없다. 부패한 독재정권을 몰아내려는 반군과 정부군의 대치는 1990년 12월 30일 반군이 수도 모가디슈에 입성하면서 내전으로 번진다. 통신은 물론 항공편마저 끊겨 아수라장이 된 모가디슈. 북한 대사관 사람들은 반군의 공격으로 갈 곳을 잃고, 한신성 대사는 도움을 요청한 북한 사람들을 관저로 들이는데...",
+          "vote_average": 7.1,
+          "director": "류승완",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "전쟁",
+            "액션",
+            "스릴러",
+            "드라마",
+            "역사"
+          ],
+          "rating_imdb": 7.1,
+          "reason": "실화 기반의 긴장감 있는 서사로 높은 몰입감 제공",
+          "overview_ko": "내전 속 소말리아에서 남북 대사들이 생존을 위해 협력한다. 실제 사건을 바탕으로 한 긴박한 탈출극이다.",
+          "cognitive_match": "복잡한 구조와 인간 심리를 중시하는 고인내형 관객에게 적합"
+        },
+        {
+          "tmdb_id": 337404,
+          "title": "크루엘라",
+          "title_ko": "크루엘라",
+          "poster_url": "https://image.tmdb.org/t/p/w500/89y66LHU3T3txFALo2nwyBfYpWA.jpg",
+          "overview": "재능은 있지만 밑바닥 인생을 살던 에스텔라는 우여곡절 끝에 런던에 오게 된다. 그곳에서 운명처럼 재스퍼와 호레이스를 만난 에스텔라는 뛰어난 패션 감각을 이용해 완벽한 변장과 빠른 손놀림으로 런던 거리를 싹쓸이한다. 도둑질이 지겹게 느껴질 때 쯤, 꿈에 그리던 리버티 백화점에 들어가게 된 에스텔라. 그곳에서 런던 패션계를 꽉 쥐고 있는 남작 부인을 만나 충격적 사건을 겪게 되며, 에스텔라는 런던 패션계를 발칵 뒤집을 파격 아이콘 크루엘라로 새롭게 태어나게 되는데...",
+          "vote_average": 7.973,
+          "director": "크레이그 길레스피",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "코미디",
+            "범죄",
+            "모험"
+          ],
+          "rating_imdb": 7.973,
+          "reason": "주인공의 성장과 내면 변화를 중심으로 한 독창적 스토리",
+          "overview_ko": "패션에 재능 있는 에스텔라가 런던에서 자신만의 스타일로 세상에 도전한다. 독창적 캐릭터 성장담이다.",
+          "cognitive_match": "서사 중심의 창의적 전개를 선호하는 관객과 잘 맞음"
+        },
+        {
+          "tmdb_id": 615643,
+          "title": "미나리",
+          "title_ko": "미나리",
+          "poster_url": "https://image.tmdb.org/t/p/w500/ltS2iKKvvBi7ZXWPRZSZBGmC9Gr.jpg",
+          "overview": "낯선 미국에서 병아리를 감별하며 생계를 이어가던 제이콥과 모니카. 딸 앤과 아들 데이빗에게 아버지로서 뭔가 해내는 모습을 보여주고 싶은 제이콥은 아칸소로 이주해 자신의 농장을 가꾼다. 모니카는 낡은 컨테이너에서 생활하며 농장 일에만 몰두하는 제이콥이 못마땅하지만 그저 그의 결정을 지켜볼 뿐이다. 아칸소에서의 적적하고 고된 삶에 지친 모니카는 엄마 순자를 미국으로 모신다. 한약, 멸치, 미나리 씨 등을 잔뜩 챙겨온 순자는 여느 할머니와 달리 요리도 하지 않고 프로레슬링을 즐겨 본다. 앤과 데이빗은 그런 할머니가 낯설지만, 못된 장난까지 사랑으로 포용하는 할머니와 점점 가까워진다.",
+          "vote_average": 7.33,
+          "director": "정이삭",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "드라마"
+          ],
+          "rating_imdb": 7.33,
+          "reason": "가족과 정체성의 이야기를 섬세하게 풀어낸 감정 서사",
+          "overview_ko": "미국으로 이주한 한국 가족이 새로운 삶을 개척하며 겪는 갈등과 희망을 그린 섬세한 가족 드라마다.",
+          "cognitive_match": "깊이 있는 드라마와 현실적 스토리를 선호하는 성향에 부합"
+        }
+      ],
+      "reasoning_log": [
+        {
+          "id": "607844",
+          "reason": "실화 기반의 긴장감 있는 서사로 높은 몰입감 제공",
+          "cognitive_match": "복잡한 구조와 인간 심리를 중시하는 고인내형 관객에게 적합"
+        },
+        {
+          "id": "337404",
+          "reason": "주인공의 성장과 내면 변화를 중심으로 한 독창적 스토리",
+          "cognitive_match": "서사 중심의 창의적 전개를 선호하는 관객과 잘 맞음"
+        },
+        {
+          "id": "615643",
+          "reason": "가족과 정체성의 이야기를 섬세하게 풀어낸 감정 서사",
+          "cognitive_match": "깊이 있는 드라마와 현실적 스토리를 선호하는 성향에 부합"
+        }
+      ],
+      "elapsed_ms_client": 14600
+    },
+    {
+      "name": "Case 5 - empty profile",
+      "profile": {
+        "genres": []
+      },
+      "candidate_count": 15,
+      "candidate_ids": [
+        "607844",
+        "524434",
+        "497698",
+        "385128",
+        "623135",
+        "635302",
+        "580489",
+        "695199",
+        "337404",
+        "566525",
+        "602463",
+        "644714",
+        "370172",
+        "615643",
+        "654739"
+      ],
+      "selected_ids": [
+        "607844",
+        "623135",
+        "615643"
+      ],
+      "meta": {
+        "candidate_count": 15,
+        "selected_ids": [
+          "607844",
+          "623135",
+          "615643"
+        ],
+        "llm_latency_ms": 4998,
+        "token_usage": {
+          "prompt_tokens": 2508,
+          "completion_tokens": 404,
+          "total_tokens": 2912
+        },
+        "fallback_used": false
+      },
+      "overall_reasoning": "장르 선호가 없는 사용자를 위해 드라마, 코미디, 실화 기반 등 다양한 감정선을 가진 세 작품을 선정함.",
+      "checks": {
+        "returned_3": true,
+        "all_in_candidates": true,
+        "stable_fields": true,
+        "reasoning_pairs_3": true,
+        "under_10s": true,
+        "null_safe": true
+      },
+      "pass": true,
+      "sample_recommendations": [
+        {
+          "tmdb_id": 607844,
+          "title": "모가디슈",
+          "title_ko": "모가디슈",
+          "poster_url": "https://image.tmdb.org/t/p/w500/oeu5TgAd0MrHplBIvCFpt9AIEBm.jpg",
+          "overview": "유엔 가입을 위해 다수의 투표권을 지닌 아프리카 대륙에서 열심히 외교 활동을 벌이던 1990년. 소말리아의 수도 모가디슈에서도 남북의 외교전은 불이 붙는다. 한신성 주소말리아 한국 대사와 안기부 출신의 강대진 참사관, 북한의 림용수 대사와 태준기 참사관은 함정을 파거나 거짓 정보를 흘려가며 서로를 견제한다. 한편 소말리아의 상황은 불안하기 그지없다. 부패한 독재정권을 몰아내려는 반군과 정부군의 대치는 1990년 12월 30일 반군이 수도 모가디슈에 입성하면서 내전으로 번진다. 통신은 물론 항공편마저 끊겨 아수라장이 된 모가디슈. 북한 대사관 사람들은 반군의 공격으로 갈 곳을 잃고, 한신성 대사는 도움을 요청한 북한 사람들을 관저로 들이는데...",
+          "vote_average": 7.1,
+          "director": "류승완",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "전쟁",
+            "액션",
+            "스릴러",
+            "드라마",
+            "역사"
+          ],
+          "rating_imdb": 7.1,
+          "reason": "현실적 긴장감과 인간 드라마가 조화된 작품",
+          "overview_ko": "1990년 소말리아 내전 속에서 남북 외교관들이 생존을 위해 협력한다. 혼란 속 인간애와 긴박한 탈출기를 그린 실화 기반 영화.",
+          "cognitive_match": "장르 선호가 없을 때 몰입감 높은 실화 기반 영화는 보편적 흥미를 유발"
+        },
+        {
+          "tmdb_id": 623135,
+          "title": "싱크홀",
+          "title_ko": "싱크홀",
+          "poster_url": "https://image.tmdb.org/t/p/w500/nEslKzaq3LKuQcDTNODzwh149Qh.jpg",
+          "overview": "서울 입성과 함께 내 집 마련의 꿈을 이룬 가장 동원은 이사 첫날부터 프로 참견러 만수와 사사건건 부딪힌다. 동원은 자가취득을 기념하며 직장 동료들을 집들이에 초대하지만 행복한 단꿈도 잠시, 순식간에 빌라 전체가 땅 속으로 떨어지고 만다. 지하 500m 싱크홀 속으로 떨어진 이들은 과연 무사히 빠져나갈 수 있을까?",
+          "vote_average": 6.884,
+          "director": "김지훈",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "코미디",
+            "드라마"
+          ],
+          "rating_imdb": 6.884,
+          "reason": "일상적 상황 속 유머와 재난의 대비가 흥미로움",
+          "overview_ko": "서울의 한 빌라가 갑작스러운 싱크홀에 빠지며 주민들이 생존을 위해 고군분투한다. 코믹하면서도 따뜻한 인간 군상을 담았다.",
+          "cognitive_match": "가벼운 웃음과 사회적 공감 요소가 장르 무관 관객에게 친근함"
+        },
+        {
+          "tmdb_id": 615643,
+          "title": "미나리",
+          "title_ko": "미나리",
+          "poster_url": "https://image.tmdb.org/t/p/w500/ltS2iKKvvBi7ZXWPRZSZBGmC9Gr.jpg",
+          "overview": "낯선 미국에서 병아리를 감별하며 생계를 이어가던 제이콥과 모니카. 딸 앤과 아들 데이빗에게 아버지로서 뭔가 해내는 모습을 보여주고 싶은 제이콥은 아칸소로 이주해 자신의 농장을 가꾼다. 모니카는 낡은 컨테이너에서 생활하며 농장 일에만 몰두하는 제이콥이 못마땅하지만 그저 그의 결정을 지켜볼 뿐이다. 아칸소에서의 적적하고 고된 삶에 지친 모니카는 엄마 순자를 미국으로 모신다. 한약, 멸치, 미나리 씨 등을 잔뜩 챙겨온 순자는 여느 할머니와 달리 요리도 하지 않고 프로레슬링을 즐겨 본다. 앤과 데이빗은 그런 할머니가 낯설지만, 못된 장난까지 사랑으로 포용하는 할머니와 점점 가까워진다.",
+          "vote_average": 7.33,
+          "director": "정이삭",
+          "actors": [],
+          "year": 2021,
+          "genres": [
+            "드라마"
+          ],
+          "rating_imdb": 7.33,
+          "reason": "가족과 삶의 의미를 다루는 따뜻한 드라마",
+          "overview_ko": "미국 이주 가족이 새로운 삶을 시작하며 꿈과 현실 사이에서 갈등한다. 가족의 사랑과 희망을 섬세하게 그린 감동적인 이야기.",
+          "cognitive_match": "보편적 인간 감정에 집중한 서사는 장르 편향이 없는 관객에게 적합"
+        }
+      ],
+      "reasoning_log": [
+        {
+          "id": "607844",
+          "reason": "현실적 긴장감과 인간 드라마가 조화된 작품",
+          "cognitive_match": "장르 선호가 없을 때 몰입감 높은 실화 기반 영화는 보편적 흥미를 유발"
+        },
+        {
+          "id": "623135",
+          "reason": "일상적 상황 속 유머와 재난의 대비가 흥미로움",
+          "cognitive_match": "가벼운 웃음과 사회적 공감 요소가 장르 무관 관객에게 친근함"
+        },
+        {
+          "id": "615643",
+          "reason": "가족과 삶의 의미를 다루는 따뜻한 드라마",
+          "cognitive_match": "보편적 인간 감정에 집중한 서사는 장르 편향이 없는 관객에게 적합"
+        }
+      ],
+      "elapsed_ms_client": 6117
+    }
+  ],
+  "average_elapsed_ms_client": 10370,
+  "average_elapsed_ms_server": 8014,
+  "token_usage": [
+    {
+      "prompt_tokens": 2537,
+      "completion_tokens": 379,
+      "total_tokens": 2916
+    },
+    {
+      "prompt_tokens": 2534,
+      "completion_tokens": 419,
+      "total_tokens": 2953
+    },
+    {
+      "prompt_tokens": 2538,
+      "completion_tokens": 416,
+      "total_tokens": 2954
+    },
+    {
+      "prompt_tokens": 2541,
+      "completion_tokens": 379,
+      "total_tokens": 2920
+    },
+    {
+      "prompt_tokens": 2508,
+      "completion_tokens": 404,
+      "total_tokens": 2912
+    }
+  ]
+}

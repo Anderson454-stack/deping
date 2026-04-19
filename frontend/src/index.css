@@ -140,6 +140,15 @@
     display: none;                  /* Chrome, Safari */
   }
 
+  /* 카드 슬라이드-인 애니메이션 (CardSelector 신규 추가 카드) */
+  @keyframes slideIn {
+    0%   { opacity: 0; transform: translateY(16px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0)    scale(1); }
+  }
+  .card-slide-in {
+    animation: slideIn 0.4s ease-out forwards;
+  }
+
   /* 채팅 입력박스 다크모드 테두리 */
   .chat-input-box {
     border: 1.5px solid rgba(0, 0, 0, 0.18);

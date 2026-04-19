@@ -1,0 +1,13 @@
+INFO:     127.0.0.1:63973 - "GET /health HTTP/1.1" 200 OK
+[Deping] 영화 풀 로드: tmdb_data_mis.json (245편)
+INFO:     127.0.0.1:65213 - "POST /api/recommend HTTP/1.1" 200 OK
+[Deping] Agent 2 search fallback (0건 → filter 제거)
+[Deping] Agent 2 search fallback (0건 → 전체 인기 후보)
+INFO:     127.0.0.1:60767 - "POST /api/recommend HTTP/1.1" 200 OK
+[Deping] Agent 2 search fallback (0건 → filter 제거)
+[Deping] Agent 2 search fallback (0건 → 전체 인기 후보)
+INFO:     127.0.0.1:62691 - "POST /api/recommend HTTP/1.1" 200 OK
+[Deping] Agent 2 search fallback (0건 → filter 제거)
+[Deping] Agent 2 search fallback (0건 → 전체 인기 후보)
+INFO:     127.0.0.1:54113 - "POST /api/recommend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50167 - "POST /api/recommend HTTP/1.1" 200 OK

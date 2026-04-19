@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__vexp__run_pipeline"
+    ]
+  }
+}

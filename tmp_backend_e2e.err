@@ -1,0 +1,6 @@
+INFO:     Started server process [6700]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Agent 3 실패: Unterminated string starting at: line 11 column 15 (char 608)
+Agent 3 실패: Unterminated string starting at: line 13 column 24 (char 685)
