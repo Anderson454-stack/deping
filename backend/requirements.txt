@@ -11,3 +11,4 @@ httpx>=0.25
 azure-search-documents>=11.4.0
 azure-storage-blob>=12.19.0
 azure-core>=1.29.0
+slowapi>=0.1.9

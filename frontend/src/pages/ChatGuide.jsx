@@ -65,6 +65,7 @@ const ChatGuide = () => {
     mood: 0, energy: 0, complexity: 0, patience: 0,
     visual_style: 0, temperature: 0, ending_style: 0,
     inner_need: 0,
+    genres: [],
     priority: [],
     avoidance: [],
     refs: { actors: [], directors: [], movies: [] },
@@ -129,6 +130,12 @@ const ChatGuide = () => {
   const callAgent = async ({ userMessage, turn, profileSnapshot, historySnapshot }) => {
     setIsAnalyzing(true);
     try {
+      console.log('[Deping][Trace] callAgent.request', {
+        turn,
+        userMessage,
+        profileBeforeCall: profileSnapshot,
+      });
+
       const result = await chatWithAgent({
         userMessage,
         conversationHistory: historySnapshot,
@@ -137,6 +144,12 @@ const ChatGuide = () => {
       });
 
       const newProfile = mergeProfile(profileSnapshot, result.profileUpdates);
+      console.log('[Deping][Trace] callAgent.merge', {
+        turn,
+        userMessage,
+        profilerProfileUpdates: result.profileUpdates,
+        profileAfterMerge: newProfile,
+      });
       setUserProfile(newProfile);
 
       addBotMessage(result.botMessage);
@@ -162,7 +175,6 @@ const ChatGuide = () => {
   // ── 단일 타입 카드 모달 완료 처리 ───────────────────────
   const handleCardModalComplete = (names) => {
     setShowCardModal(false);
-
     const typeLabel = cardModalType === 'actor' ? '배우' : cardModalType === 'director' ? '감독' : '영화';
     const userMsg = names.length > 0
       ? `${typeLabel} 선택 완료 — ${names.join(', ')}`
@@ -173,6 +185,7 @@ const ChatGuide = () => {
       ...userProfile,
       refs: { ...userProfile.refs, [profileKey]: names },
     };
+
     setUserProfile(newProfile);
     addMessage({ type: 'user', text: userMsg });
     callAgent({
@@ -317,14 +330,26 @@ const ChatGuide = () => {
       movies = recs.map((r) => ({
         tmdb_id:     r.tmdb_id,
         title:       r.title_ko || r.title,
+        title_ko:    r.title_ko || r.title,
         year:        r.year,
         genre:       (r.genres || []).join(' · '),
-        runtime:     r.runtime ? `${r.runtime}분` : '?분',
+        genres:      r.genres || [],
+        runtime:     r.runtime ?? null,
         rating:      r.rating_imdb || 0,
+        vote_average: r.rating_imdb || 0,
         reason:      r.reason,
+        description: r.reason,
+        overview:    r.overview || r.overview_ko || '',
+        overview_ko: r.overview_ko || r.overview || '',
+        director:    r.director || '',
+        actors:      r.actors || r.cast || [],
+        cast:        r.cast || r.actors || [],
+        release_date: r.release_date || '',
+        poster_path: r.poster_path || null,
         complexity:  40,
         visual:      70,
         poster_url:  r.poster_url || null,
+        image:       r.poster_url || null,
         posterColor: 'var(--color-surface-container-highest)',
       }));
       saveRecommendations(movies);

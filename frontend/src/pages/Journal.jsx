@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageTransition } from '../components/motion/PageTransition';
 import { useRecommendationHistory } from '../hooks/useRecommendationHistory';
@@ -36,14 +36,31 @@ function getMonthMatrix(monthDate) {
   });
 }
 
+const JOURNAL_UI_KEY = 'deping_journal_ui_state';
+const JOURNAL_SCROLL_KEY = 'deping_journal_scroll_top';
+
+function readJournalUiState() {
+  try {
+    const raw = sessionStorage.getItem(JOURNAL_UI_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
 const Journal = () => {
   const navigate = useNavigate();
   const { journalEntries } = useRecommendationHistory();
+  const persistedUiState = useMemo(() => readJournalUiState(), []);
+  const scrollContainerRef = useRef(null);
   const [currentMonth, setCurrentMonth] = useState(() => {
+    if (persistedUiState?.currentMonth) {
+      return new Date(persistedUiState.currentMonth);
+    }
     const now = new Date();
     return new Date(now.getFullYear(), now.getMonth(), 1);
   });
-  const [selectedDate, setSelectedDate] = useState(() => toDateKey(new Date()));
+  const [selectedDate, setSelectedDate] = useState(() => persistedUiState?.selectedDate ?? toDateKey(new Date()));
 
   const journalMap = useMemo(() => (
     journalEntries.reduce((accumulator, entry) => {
@@ -57,13 +74,40 @@ const Journal = () => {
   const hasAnyEntries = journalEntries.length > 0;
   const monthLabel = currentMonth.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long' });
 
+  useEffect(() => {
+    sessionStorage.setItem(
+      JOURNAL_UI_KEY,
+      JSON.stringify({
+        currentMonth: currentMonth.toISOString(),
+        selectedDate,
+      })
+    );
+  }, [currentMonth, selectedDate]);
+
+  useEffect(() => {
+    const savedScroll = Number(sessionStorage.getItem(JOURNAL_SCROLL_KEY) ?? 0);
+    if (!Number.isFinite(savedScroll) || savedScroll <= 0) return;
+
+    const frameId = window.requestAnimationFrame(() => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollTop = savedScroll;
+      }
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, []);
+
   const goToMonth = (offset) => {
     setCurrentMonth((prev) => new Date(prev.getFullYear(), prev.getMonth() + offset, 1));
   };
 
   return (
     <PageTransition className="h-full">
-      <div className="h-full overflow-y-auto px-6 md:px-12 py-8">
+      <div
+        ref={scrollContainerRef}
+        onScroll={(event) => sessionStorage.setItem(JOURNAL_SCROLL_KEY, String(event.currentTarget.scrollTop))}
+        className="h-full overflow-y-auto px-6 md:px-12 py-8"
+      >
         <div className="max-w-7xl mx-auto pb-12">
           <section className="mb-10">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">

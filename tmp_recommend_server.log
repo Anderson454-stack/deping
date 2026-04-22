@@ -1,13 +1,214 @@
-INFO:     127.0.0.1:63973 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62959 - "GET /docs HTTP/1.1" 200 OK
+[Recommend][deployment] gpt-5-chat
+[Searcher][params] {"raw": {"mood": -1, "energy": -1, "complexity": 0, "patience": 2, "visual_style": -2, "ending_style": -2, "inner_need": -2, "temperature": 1}, "labels": {"mood": null, "energy": null, "complexity": null, "patience": "high", "visual_style": "story_over_visuals", "ending_style": "resolved", "inner_need": "healing", "temperature": null}, "inner_need_used": -2, "temperature_used": 1, "priority": ["story"], "avoidance": [], "params": {"query": "잔잔한 영화 편안한 영화 calm low-energy film 잔잔한 위로 영화 따뜻한 영화 healing comforting film 부드러운 영화 warm gentle film soft restful film cozy healing film story-driven film", "genre": null, "year_from": null, "year_to": null, "plot_complexity_level": null, "pacing": "slow", "visual_level": null, "excluded_genres": [], "top": 15}}
+[Searcher][result] {"query": "잔잔한 영화 편안한 영화 calm low-energy film 잔잔한 위로 영화 따뜻한 영화 healing comforting film 부드러운 영화 warm gentle film soft restful film cozy healing film story-driven film", "filter": "pacing eq 'slow'", "count": 7, "top_titles": ["더 퍼스트 슬램덩크", "소울", "승부", "리바운드", "오펜하이머"]}
+[Recommend][candidates_count] 7
+[Recommend][attempt=1][rawLength] 420
+[Recommend][attempt=1][rawTail] ", "cognitive_match": "낮은 에너지와 치유 욕구에 부합" },
+    { "id": "695199", "reason": "실화 기반의 조용한 감동", "cognitive_match": "차분한 분위기와 높은 인내심에 적합" },
+    { "id": "760497", "reason": "사제 관계의 깊은 인간 드라마", "cognitive_match": "이야기 중심의 정서적 몰입 제공" }
+  ],
+  "overall_reasoning": "감정적으로 차분하고 서사 중심의 감동적 드라마 3편을 선정했습니다."
+}
+[Recommend][attempt=1][finishReason] stop
 [Deping] 영화 풀 로드: tmdb_data_mis.json (245편)
-INFO:     127.0.0.1:65213 - "POST /api/recommend HTTP/1.1" 200 OK
-[Deping] Agent 2 search fallback (0건 → filter 제거)
-[Deping] Agent 2 search fallback (0건 → 전체 인기 후보)
-INFO:     127.0.0.1:60767 - "POST /api/recommend HTTP/1.1" 200 OK
-[Deping] Agent 2 search fallback (0건 → filter 제거)
-[Deping] Agent 2 search fallback (0건 → 전체 인기 후보)
-INFO:     127.0.0.1:62691 - "POST /api/recommend HTTP/1.1" 200 OK
-[Deping] Agent 2 search fallback (0건 → filter 제거)
-[Deping] Agent 2 search fallback (0건 → 전체 인기 후보)
-INFO:     127.0.0.1:54113 - "POST /api/recommend HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50167 - "POST /api/recommend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63628 - "POST /api/recommend HTTP/1.1" 200 OK
+[Recommend][deployment] gpt-5-chat
+[Searcher][params] {"raw": {"mood": -1, "energy": -1, "complexity": -2, "patience": 2, "visual_style": -2, "ending_style": -2, "inner_need": -2, "temperature": 2}, "labels": {"mood": null, "energy": null, "complexity": "low", "patience": "high", "visual_style": "story_over_visuals", "ending_style": "resolved", "inner_need": "healing", "temperature": "warm_emotional"}, "inner_need_used": -2, "temperature_used": 2, "priority": ["story"], "avoidance": ["gore", "horror"], "params": {"query": "잔잔한 영화 편안한 영화 calm low-energy film 잔잔한 위로 영화 따뜻한 영화 healing comforting film 부드러운 영화 warm gentle film soft restful film cozy healing film story-driven film", "genre": null, "year_from": null, "year_to": null, "plot_complexity_level": "low", "pacing": "slow", "visual_level": null, "excluded_genres": ["gore", "horror"], "top": 15}}
+[Searcher][result] {"query": "잔잔한 영화 편안한 영화 calm low-energy film 잔잔한 위로 영화 따뜻한 영화 healing comforting film 부드러운 영화 warm gentle film soft restful film cozy healing film story-driven film", "filter": "not genres/any(g: g eq 'gore') and not genres/any(g: g eq 'horror') and plot_complexity_level eq 'low' and pacing eq 'slow'", "count": 2, "top_titles": ["더 퍼스트 슬램덩크", "빅토리"]}
+[Recommend][candidates_count] 2
+[Recommend][attempt=1][rawLength] 333
+[Recommend][attempt=1][rawTail] 091051"],
+  "reasoning_log": [
+    { "id": "783675", "reason": "따뜻한 성장과 도전의 이야기", "cognitive_match": "낮은 복잡도와 따뜻한 감정선에 부합" },
+    { "id": "1091051", "reason": "밝고 유쾌한 청춘의 에너지", "cognitive_match": "따뜻한 분위기와 단순한 스토리 중심" }
+  ],
+  "overall_reasoning": "감정적으로 따뜻하고 단순한 스토리 중심의 두 작품이 사용자의 힐링 성향과 잘 맞습니다."
+}
+[Recommend][attempt=1][finishReason] stop
+INFO:     127.0.0.1:63633 - "POST /api/recommend HTTP/1.1" 200 OK
+[Recommend][deployment] gpt-5-chat
+[Searcher][params] {"raw": {"mood": 2, "energy": 2, "complexity": 2, "patience": -2, "visual_style": 2, "ending_style": 2, "inner_need": 2, "temperature": -2}, "labels": {"mood": "high_energy_mood", "energy": "fully_engaged", "complexity": "high", "patience": "low", "visual_style": "visuals_over_story", "ending_style": "lingering", "inner_need": "energy", "temperature": "cold_tense"}, "inner_need_used": 2, "temperature_used": -2, "priority": ["visual", "story"], "avoidance": [], "params": {"query": "에너지 넘치는 영화 dynamic high-energy film fast-paced film cinematic visuals story-driven film", "genre": null, "year_from": null, "year_to": null, "plot_complexity_level": "high", "pacing": "fast", "visual_level": "high", "excluded_genres": [], "top": 15}}
+[Searcher][result] {"query": "에너지 넘치는 영화 dynamic high-energy film fast-paced film cinematic visuals story-driven film", "filter": "plot_complexity_level eq 'high' and pacing eq 'fast' and visual_level eq 'high'", "count": 124, "top_titles": ["닥터 스트레인지: 대혼돈의 멀티버스", "블랙 위도우", "앤트맨과 와스프: 퀀텀매니아", "더 마블스", "분노의 질주: 더 얼티메이트"]}
+[Recommend][candidates_count] 15
+[Recommend][attempt=1][rawLength] 472
+[Recommend][attempt=1][rawTail]  },
+    { "id": "606400", "reason": "냉정하고 긴장감 있는 리얼리즘", "cognitive_match": "차가운 온도감과 빠른 전개를 선호하는 성향과 부합" },
+    { "id": "616037", "reason": "유머와 화려한 색감의 조화", "cognitive_match": "시각적 쾌감과 가벼운 몰입을 원하는 성향과 일치" }
+  ],
+  "overall_reasoning": "사용자는 시각적 자극과 빠른 전개를 선호하며, 세 영화는 각각 감정, 현실감, 유머로 다른 매력을 제공한다."
+}
+[Recommend][attempt=1][finishReason] stop
+INFO:     127.0.0.1:63636 - "POST /api/recommend HTTP/1.1" 200 OK
+[Profiler][deployment] gpt-5-chat
+[Profiler][endpoint] https://9aiteam6ai.openai.azure.com/openai/v1/chat/completions
+[Profiler][userMessage] 대화를 시작해주세요
+[Deping][Trace] profiler.response_raw turn=0 userMessage='대화를 시작해주세요' currentProfile={"mood": 0, "energy": 0, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 0, "ending_style": 0, "inner_need": 0, "priority": [], "avoidance": [], "refs": {"actors": [], "directors": [], "movies": []}} rawResponse='{\n  "botMessage": "안녕하세요 😊 오늘 기분은 어떠세요? 에너지가 좀 있는 편인가요, 아니면 쉬고 싶은 하루인가요?",\n  "profileUpdates": {\n    "mood": null,\n    "energy": null,\n    "complexity": 0,\n    "patience": 0,\n    "visual_style": 0,\n    "temperature": 0,\n    "ending_style": 0,\n    "inner_need": 0,\n    "priority": [],\n    "avoidance": []\n  },\n  "quickButtons": [\n    { "label": "기분 좋아요 😄", "maps": {"mood": 2, "energy": 2} },\n    { "label": "좀 피곤해요 😪", "maps": {"mood": -1, "energy": -1} },\n    { "label": "편안하게 쉬고 싶어요 🌙", "maps": {"mood": 0, "energy": -2} },\n    { "label": "조금 다운돼요 😔", "maps": {"mood": -2, "energy": -2} }\n  ],\n  "showModal": false,\n  "isComplete": false\n}'
+[Profiler][rawResponse] {
+  "botMessage": "안녕하세요 😊 오늘 기분은 어떠세요? 에너지가 좀 있는 편인가요, 아니면 쉬고 싶은 하루인가요?",
+  "profileUpdates": {
+    "mood": null,
+    "energy": null,
+    "complexity": 0,
+    "patience": 0,
+    "visual_style": 0,
+    "temperature": 0,
+    "ending_style": 0,
+    "inner_need": 0,
+    "priority": [],
+    "avoidance": []
+  },
+  "quickButtons": [
+    { "label": "기분 좋아요 😄", "maps": {"mood": 2, "energy": 2} },
+    { "label": "좀 피곤해요 😪", "maps": {"mood": -1, "energy": -1} },
+    { "label": "편안하게 쉬고 싶어요 🌙", "maps": {"mood": 0, "energy": -2} },
+    { "label": "조금 다운돼요 😔", "maps": {"mood": -2, "energy": -2} }
+  ],
+  "showModal": false,
+  "isComplete": false
+}
+[Deping][Trace] profiler.response_parsed turn=0 userMessage='대화를 시작해주세요' profileUpdates={"mood": null, "energy": null, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 0, "ending_style": 0, "inner_need": 0, "priority": [], "avoidance": []} quickButtonMaps=[{"mood": 2, "energy": 2}, {"mood": -1, "energy": -1}, {"mood": 0, "energy": -2}, {"mood": -2, "energy": -2}] fullResult={"botMessage": "안녕하세요 😊 오늘 기분은 어떠세요? 에너지가 좀 있는 편인가요, 아니면 쉬고 싶은 하루인가요?", "profileUpdates": {"mood": null, "energy": null, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 0, "ending_style": 0, "inner_need": 0, "priority": [], "avoidance": []}, "quickButtons": [{"label": "기분 좋아요 😄", "maps": {"mood": 2, "energy": 2}}, {"label": "좀 피곤해요 😪", "maps": {"mood": -1, "energy": -1}}, {"label": "편안하게 쉬고 싶어요 🌙", "maps": {"mood": 0, "energy": -2}}, {"label": "조금 다운돼요 😔", "maps": {"mood": -2, "energy": -2}}], "showModal": false, "isComplete": false, "type": "chat"}
+[Profiler][parsed] {"botMessage": "안녕하세요 😊 오늘 기분은 어떠세요? 에너지가 좀 있는 편인가요, 아니면 쉬고 싶은 하루인가요?", "profileUpdates": {"mood": null, "energy": null, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 0, "ending_style": 0, "inner_need": 0, "priority": [], "avoidance": []}, "quickButtons": [{"label": "기분 좋아요 😄", "maps": {"mood": 2, "energy": 2}}, {"label": "좀 피곤해요 😪", "maps": {"mood": -1, "energy": -1}}, {"label": "편안하게 쉬고 싶어요 🌙", "maps": {"mood": 0, "energy": -2}}, {"label": "조금 다운돼요 😔", "maps": {"mood": -2, "energy": -2}}], "showModal": false, "isComplete": false, "type": "chat"}
+[Profiler][profileUpdates] {"mood": null, "energy": null, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 0, "ending_style": 0, "inner_need": 0, "priority": [], "avoidance": []}
+[Profiler][quickButtonMaps] [{"mood": 2, "energy": 2}, {"mood": -1, "energy": -1}, {"mood": 0, "energy": -2}, {"mood": -2, "energy": -2}]
+INFO:     49.167.119.60:0 - "POST /api/chat HTTP/1.1" 200 OK
+[Profiler][deployment] gpt-5-chat
+[Profiler][endpoint] https://9aiteam6ai.openai.azure.com/openai/v1/chat/completions
+[Profiler][userMessage] 편안하게 쉬고 싶어요 🌙
+[Deping][Trace] profiler.response_raw turn=0 userMessage='편안하게 쉬고 싶어요 🌙' currentProfile={"mood": 0, "energy": 0, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 0, "ending_style": 0, "inner_need": 0, "priority": [], "avoidance": [], "refs": {"actors": [], "directors": [], "movies": []}} rawResponse='{\n  "botMessage": "좋아요 🌙 편안하게 쉬고 싶은 기분이군요. 그럼 영화 볼 때는 어떤 스타일을 좋아하세요? 영상미가 중요한지, 스토리가 탄탄한지, 아니면 속도감 있는 전개가 좋은지 궁금해요.",\n  "profileUpdates": {\n    "mood": -1,\n    "energy": -1,\n    "complexity": null,\n    "patience": null,\n    "visual_style": null,\n    "temperature": 1,\n    "ending_style": null,\n    "inner_need": -1,\n    "priority": [],\n    "avoidance": []\n  },\n  "quickButtons": [\n    { "label": "영상미가 중요해요 🎨", "maps": {"visual_style": 2} },\n    { "label": "스토리가 탄탄해야죠 📖", "maps": {"complexity": 1} },\n    { "label": "속도감 있는 게 좋아요 ⚡", "maps": {"patience": -1} },\n    { "label": "잔잔한 게 좋아요 🌿", "maps": {"patience": 2} }\n  ],\n  "showModal": false,\n  "isComplete": false\n}'
+[Profiler][rawResponse] {
+  "botMessage": "좋아요 🌙 편안하게 쉬고 싶은 기분이군요. 그럼 영화 볼 때는 어떤 스타일을 좋아하세요? 영상미가 중요한지, 스토리가 탄탄한지, 아니면 속도감 있는 전개가 좋은지 궁금해요.",
+  "profileUpdates": {
+    "mood": -1,
+    "energy": -1,
+    "complexity": null,
+    "patience": null,
+    "visual_style": null,
+    "temperature": 1,
+    "ending_style": null,
+    "inner_need": -1,
+    "priority": [],
+    "avoidance": []
+  },
+  "quickButtons": [
+    { "label": "영상미가 중요해요 🎨", "maps": {"visual_style": 2} },
+    { "label": "스토리가 탄탄해야죠 📖", "maps": {"complexity": 1} },
+    { "label": "속도감 있는 게 좋아요 ⚡", "maps": {"patience": -1} },
+    { "label": "잔잔한 게 좋아요 🌿", "maps": {"patience": 2} }
+  ],
+  "showModal": false,
+  "isComplete": false
+}
+[Deping][Trace] profiler.response_parsed turn=0 userMessage='편안하게 쉬고 싶어요 🌙' profileUpdates={"mood": -1, "energy": -1, "complexity": null, "patience": null, "visual_style": null, "temperature": 1, "ending_style": null, "inner_need": -1, "priority": [], "avoidance": []} quickButtonMaps=[{"visual_style": 2}, {"complexity": 1}, {"patience": -1}, {"patience": 2}] fullResult={"botMessage": "좋아요 🌙 편안하게 쉬고 싶은 기분이군요. 그럼 영화 볼 때는 어떤 스타일을 좋아하세요? 영상미가 중요한지, 스토리가 탄탄한지, 아니면 속도감 있는 전개가 좋은지 궁금해요.", "profileUpdates": {"mood": -1, "energy": -1, "complexity": null, "patience": null, "visual_style": null, "temperature": 1, "ending_style": null, "inner_need": -1, "priority": [], "avoidance": []}, "quickButtons": [{"label": "영상미가 중요해요 🎨", "maps": {"visual_style": 2}}, {"label": "스토리가 탄탄해야죠 📖", "maps": {"complexity": 1}}, {"label": "속도감 있는 게 좋아요 ⚡", "maps": {"patience": -1}}, {"label": "잔잔한 게 좋아요 🌿", "maps": {"patience": 2}}], "showModal": false, "isComplete": false, "type": "chat"}
+[Profiler][parsed] {"botMessage": "좋아요 🌙 편안하게 쉬고 싶은 기분이군요. 그럼 영화 볼 때는 어떤 스타일을 좋아하세요? 영상미가 중요한지, 스토리가 탄탄한지, 아니면 속도감 있는 전개가 좋은지 궁금해요.", "profileUpdates": {"mood": -1, "energy": -1, "complexity": null, "patience": null, "visual_style": null, "temperature": 1, "ending_style": null, "inner_need": -1, "priority": [], "avoidance": []}, "quickButtons": [{"label": "영상미가 중요해요 🎨", "maps": {"visual_style": 2}}, {"label": "스토리가 탄탄해야죠 📖", "maps": {"complexity": 1}}, {"label": "속도감 있는 게 좋아요 ⚡", "maps": {"patience": -1}}, {"label": "잔잔한 게 좋아요 🌿", "maps": {"patience": 2}}], "showModal": false, "isComplete": false, "type": "chat"}
+[Profiler][profileUpdates] {"mood": -1, "energy": -1, "complexity": null, "patience": null, "visual_style": null, "temperature": 1, "ending_style": null, "inner_need": -1, "priority": [], "avoidance": []}
+[Profiler][quickButtonMaps] [{"visual_style": 2}, {"complexity": 1}, {"patience": -1}, {"patience": 2}]
+INFO:     49.167.119.60:0 - "POST /api/chat HTTP/1.1" 200 OK
+[Profiler][deployment] gpt-5-chat
+[Profiler][endpoint] https://9aiteam6ai.openai.azure.com/openai/v1/chat/completions
+[Profiler][userMessage] 속도감 있는 게 좋아요 ⚡
+[Deping][Trace] profiler.response_raw turn=1 userMessage='속도감 있는 게 좋아요 ⚡' currentProfile={"mood": -1, "energy": -1, "complexity": 0, "patience": 0, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": [], "avoidance": [], "refs": {"actors": [], "directors": [], "movies": []}} rawResponse='{\n  "botMessage": "속도감 있는 전개를 좋아하시는군요 ⚡ 그럼 혹시 좋아하는 배우나 감독이 있나요? 있다면 더 정확한 추천이 가능해요 😊",\n  "profileUpdates": {\n    "mood": -1,\n    "energy": -1,\n    "complexity": 0,\n    "patience": -1,\n    "visual_style": 0,\n    "temperature": 1,\n    "ending_style": 0,\n    "inner_need": -1,\n    "priority": ["story"],\n    "avoidance": []\n  },\n  "quickButtons": [\n    { "label": "배우·감독 고르기 🎬", "action": "show_actor_modal" },\n    { "label": "없어요", "action": "skip_card" }\n  ],\n  "showModal": false,\n  "isComplete": false\n}'
+[Profiler][rawResponse] {
+  "botMessage": "속도감 있는 전개를 좋아하시는군요 ⚡ 그럼 혹시 좋아하는 배우나 감독이 있나요? 있다면 더 정확한 추천이 가능해요 😊",
+  "profileUpdates": {
+    "mood": -1,
+    "energy": -1,
+    "complexity": 0,
+    "patience": -1,
+    "visual_style": 0,
+    "temperature": 1,
+    "ending_style": 0,
+    "inner_need": -1,
+    "priority": ["story"],
+    "avoidance": []
+  },
+  "quickButtons": [
+    { "label": "배우·감독 고르기 🎬", "action": "show_actor_modal" },
+    { "label": "없어요", "action": "skip_card" }
+  ],
+  "showModal": false,
+  "isComplete": false
+}
+[Deping][Trace] profiler.response_parsed turn=1 userMessage='속도감 있는 게 좋아요 ⚡' profileUpdates={"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []} quickButtonMaps=[] fullResult={"botMessage": "속도감 있는 전개를 좋아하시는군요 ⚡ 그럼 혹시 좋아하는 배우나 감독이 있나요? 있다면 더 정확한 추천이 가능해요 😊", "profileUpdates": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []}, "quickButtons": [{"label": "배우·감독 고르기 🎬", "action": "show_actor_modal"}, {"label": "없어요", "action": "skip_card"}], "showModal": false, "isComplete": false, "type": "movie_card"}
+[Profiler][parsed] {"botMessage": "속도감 있는 전개를 좋아하시는군요 ⚡ 그럼 혹시 좋아하는 배우나 감독이 있나요? 있다면 더 정확한 추천이 가능해요 😊", "profileUpdates": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []}, "quickButtons": [{"label": "배우·감독 고르기 🎬", "action": "show_actor_modal"}, {"label": "없어요", "action": "skip_card"}], "showModal": false, "isComplete": false, "type": "movie_card"}
+[Profiler][profileUpdates] {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []}
+[Profiler][quickButtonMaps] []
+INFO:     49.167.119.60:0 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     49.167.119.60:0 - "GET /api/movies/cards HTTP/1.1" 200 OK
+INFO:     49.167.119.60:0 - "GET /api/movies/cards HTTP/1.1" 200 OK
+INFO:     49.167.119.60:0 - "GET /api/actors/cards HTTP/1.1" 200 OK
+INFO:     49.167.119.60:0 - "GET /api/actors/cards HTTP/1.1" 200 OK
+INFO:     49.167.119.60:0 - "GET /api/directors/cards HTTP/1.1" 200 OK
+INFO:     49.167.119.60:0 - "GET /api/directors/cards HTTP/1.1" 200 OK
+[Profiler][deployment] gpt-5-chat
+[Profiler][endpoint] https://9aiteam6ai.openai.azure.com/openai/v1/chat/completions
+[Profiler][userMessage] 레퍼런스 선택 완료 — 영화: 극장판 체인소 맨: 레제편, 스파이더맨: 노 웨이 홈, 샹치와 텐 링즈의 전설 / 배우: 추영우, 신시아, 데이브 바티스타, 크리스 프랫, 샘 닐, 제프 골드블룸, 알렉 볼드윈, 제임스 마스던, 마고 로비, 조엘 킨나만, 실베스터 스탤론, 제시 아이젠버그
+[Deping][Trace] profiler.response_raw turn=2 userMessage='레퍼런스 선택 완료 — 영화: 극장판 체인소 맨: 레제편, 스파이더맨: 노 웨이 홈, 샹치와 텐 링즈의 전설 / 배우: 추영우, 신시아, 데이브 바티스타, 크리스 프랫, 샘 닐, 제프 골드블룸, 알렉 볼드윈, 제임스 마스던, 마고 로비, 조엘 킨나만, 실베스터 스탤론, 제시 아이젠버그' currentProfile={"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": [], "refs": {"actors": ["추영우", "신시아", "데이브 바티스타", "크리스 프랫", "샘 닐", "제프 골드블룸", "알렉 볼드윈", "제임스 마스던", "마고 로비", "조엘 킨나만", "실베스터 스탤론", "제시 아이젠버그"], "directors": [], "movies": ["극장판 체인소 맨: 레제편", "스파이더맨: 노 웨이 홈", "샹치와 텐 링즈의 전설"]}} rawResponse='{\n  "botMessage": "좋아요! 마지막으로, 오늘 영화에서 어떤 걸 가장 원하시나요? 예를 들어 힐링, 에너지 충전, 자극이나 몰입 같은 느낌이요 😊",\n  "profileUpdates": {\n    "mood": -1,\n    "energy": -1,\n    "complexity": 0,\n    "patience": -1,\n    "visual_style": 0,\n    "temperature": 1,\n    "ending_style": 0,\n    "inner_need": -1,\n    "priority": ["story"],\n    "avoidance": []\n  },\n  "quickButtons": [\n    { "label": "힐링이요 🌿", "maps": { "inner_need": -2 } },\n    { "label": "에너지 충전 ⚡", "maps": { "inner_need": 2 } },\n    { "label": "감정 몰입 🎭", "maps": { "inner_need": 0 } },\n    { "label": "기분 전환 🎬", "maps": { "inner_need": 1 } }\n  ],\n  "showModal": false,\n  "isComplete": false\n}'
+[Profiler][rawResponse] {
+  "botMessage": "좋아요! 마지막으로, 오늘 영화에서 어떤 걸 가장 원하시나요? 예를 들어 힐링, 에너지 충전, 자극이나 몰입 같은 느낌이요 😊",
+  "profileUpdates": {
+    "mood": -1,
+    "energy": -1,
+    "complexity": 0,
+    "patience": -1,
+    "visual_style": 0,
+    "temperature": 1,
+    "ending_style": 0,
+    "inner_need": -1,
+    "priority": ["story"],
+    "avoidance": []
+  },
+  "quickButtons": [
+    { "label": "힐링이요 🌿", "maps": { "inner_need": -2 } },
+    { "label": "에너지 충전 ⚡", "maps": { "inner_need": 2 } },
+    { "label": "감정 몰입 🎭", "maps": { "inner_need": 0 } },
+    { "label": "기분 전환 🎬", "maps": { "inner_need": 1 } }
+  ],
+  "showModal": false,
+  "isComplete": false
+}
+[Deping][Trace] profiler.response_parsed turn=2 userMessage='레퍼런스 선택 완료 — 영화: 극장판 체인소 맨: 레제편, 스파이더맨: 노 웨이 홈, 샹치와 텐 링즈의 전설 / 배우: 추영우, 신시아, 데이브 바티스타, 크리스 프랫, 샘 닐, 제프 골드블룸, 알렉 볼드윈, 제임스 마스던, 마고 로비, 조엘 킨나만, 실베스터 스탤론, 제시 아이젠버그' profileUpdates={"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []} quickButtonMaps=[{"inner_need": -2}, {"inner_need": 2}, {"inner_need": 0}, {"inner_need": 1}] fullResult={"botMessage": "좋아요! 마지막으로, 오늘 영화에서 어떤 걸 가장 원하시나요? 예를 들어 힐링, 에너지 충전, 자극이나 몰입 같은 느낌이요 😊", "profileUpdates": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []}, "quickButtons": [{"label": "힐링이요 🌿", "maps": {"inner_need": -2}}, {"label": "에너지 충전 ⚡", "maps": {"inner_need": 2}}, {"label": "감정 몰입 🎭", "maps": {"inner_need": 0}}, {"label": "기분 전환 🎬", "maps": {"inner_need": 1}}], "showModal": false, "isComplete": false, "type": "chat"}
+[Profiler][parsed] {"botMessage": "좋아요! 마지막으로, 오늘 영화에서 어떤 걸 가장 원하시나요? 예를 들어 힐링, 에너지 충전, 자극이나 몰입 같은 느낌이요 😊", "profileUpdates": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []}, "quickButtons": [{"label": "힐링이요 🌿", "maps": {"inner_need": -2}}, {"label": "에너지 충전 ⚡", "maps": {"inner_need": 2}}, {"label": "감정 몰입 🎭", "maps": {"inner_need": 0}}, {"label": "기분 전환 🎬", "maps": {"inner_need": 1}}], "showModal": false, "isComplete": false, "type": "chat"}
+[Profiler][profileUpdates] {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": []}
+[Profiler][quickButtonMaps] [{"inner_need": -2}, {"inner_need": 2}, {"inner_need": 0}, {"inner_need": 1}]
+INFO:     49.167.119.60:0 - "POST /api/chat HTTP/1.1" 200 OK
+[Profiler][deployment] gpt-5-chat
+[Profiler][endpoint] https://9aiteam6ai.openai.azure.com/openai/v1/chat/completions
+[Profiler][userMessage] 에너지 충전 ⚡
+[Deping][Trace] profiler.response_raw turn=3 userMessage='에너지 충전 ⚡' currentProfile={"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": -1, "priority": ["story"], "avoidance": [], "refs": {"actors": ["추영우", "신시아", "데이브 바티스타", "크리스 프랫", "샘 닐", "제프 골드블룸", "알렉 볼드윈", "제임스 마스던", "마고 로비", "조엘 킨나만", "실베스터 스탤론", "제시 아이젠버그"], "directors": [], "movies": ["극장판 체인소 맨: 레제편", "스파이더맨: 노 웨이 홈", "샹치와 텐 링즈의 전설"]}} rawResponse='{\n  "botMessage": "에너지 충전 ⚡ 원하시는군요! 액션감 있고 속도감 있는 영화로 기분을 끌어올리면 좋겠어요 💥",\n  "profileUpdates": {\n    "mood": -1,\n    "energy": -1,\n    "complexity": 0,\n    "patience": -1,\n    "visual_style": 0,\n    "temperature": 1,\n    "ending_style": 0,\n    "inner_need": 2,\n    "priority": ["story"],\n    "avoidance": []\n  },\n  "quickButtons": [],\n  "showModal": false,\n  "isComplete": true\n}'
+[Profiler][rawResponse] {
+  "botMessage": "에너지 충전 ⚡ 원하시는군요! 액션감 있고 속도감 있는 영화로 기분을 끌어올리면 좋겠어요 💥",
+  "profileUpdates": {
+    "mood": -1,
+    "energy": -1,
+    "complexity": 0,
+    "patience": -1,
+    "visual_style": 0,
+    "temperature": 1,
+    "ending_style": 0,
+    "inner_need": 2,
+    "priority": ["story"],
+    "avoidance": []
+  },
+  "quickButtons": [],
+  "showModal": false,
+  "isComplete": true
+}
+[Deping][Trace] profiler.response_parsed turn=3 userMessage='에너지 충전 ⚡' profileUpdates={"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": 2, "priority": ["story"], "avoidance": []} quickButtonMaps=[] fullResult={"botMessage": "에너지 충전 ⚡ 원하시는군요! 액션감 있고 속도감 있는 영화로 기분을 끌어올리면 좋겠어요 💥", "profileUpdates": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": 2, "priority": ["story"], "avoidance": []}, "quickButtons": [], "showModal": false, "isComplete": true, "type": "chat"}
+[Profiler][parsed] {"botMessage": "에너지 충전 ⚡ 원하시는군요! 액션감 있고 속도감 있는 영화로 기분을 끌어올리면 좋겠어요 💥", "profileUpdates": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": 2, "priority": ["story"], "avoidance": []}, "quickButtons": [], "showModal": false, "isComplete": true, "type": "chat"}
+[Profiler][profileUpdates] {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "temperature": 1, "ending_style": 0, "inner_need": 2, "priority": ["story"], "avoidance": []}
+[Profiler][quickButtonMaps] []
+INFO:     49.167.119.60:0 - "POST /api/chat HTTP/1.1" 200 OK
+[Recommend][deployment] gpt-5-chat
+[Searcher][params] {"raw": {"mood": -1, "energy": -1, "complexity": 0, "patience": -1, "visual_style": 0, "ending_style": 0, "inner_need": 2, "temperature": 1}, "labels": {"mood": null, "energy": null, "complexity": null, "patience": null, "visual_style": null, "ending_style": null, "inner_need": "energy", "temperature": null}, "inner_need_used": 2, "temperature_used": 1, "priority": ["story"], "avoidance": [], "params": {"query": "추영우 신시아 데이브 바티스타 극장판 체인소 맨: 레제편 스파이더맨: 노 웨이 홈 샹치와 텐 링즈의 전설 잔잔한 영화 편안한 영화 calm low-energy film 잔잔한 위로 영화 따뜻한 영화 healing comforting film 부드러운 영화 warm gentle film soft restful film cozy healing film story-driven film", "genre": null, "year_from": null, "year_to": null, "plot_complexity_level": null, "pacing": null, "visual_level": null, "excluded_genres": [], "top": 15}}
+[Searcher][result] {"query": "추영우 신시아 데이브 바티스타 극장판 체인소 맨: 레제편 스파이더맨: 노 웨이 홈 샹치와 텐 링즈의 전설 잔잔한 영화 편안한 영화 calm low-energy film 잔잔한 위로 영화 따뜻한 영화 healing comforting film 부드러운 영화 warm gentle film soft restful film cozy healing film story-driven film", "filter": null, "count": 122, "top_titles": ["샹치와 텐 링즈의 전설", "스파이더맨: 노 웨이 홈", "극장판 체인소 맨: 레제편", "스파이더맨: 어크로스 더 유니버스", "강릉"]}
+[Recommend][candidates_count] 15
+[Recommend][attempt=1][rawLength] 457
+[Recommend][attempt=1][rawTail]  욕구와 서사 중심 선호" },
+    { "id": "783675", "reason": "희망과 도전의 감정적 드라마", "cognitive_match": "낮은 기분을 끌어올리는 서사적 활력" },
+    { "id": "602464", "reason": "진중한 역사적 감정선과 희생의 이야기", "cognitive_match": "감정적 깊이와 의미 중심의 스토리 선호" }
+  ],
+  "overall_reasoning": "감정적으로 침잠된 상태에서 내면적 에너지를 회복할 수 있는 서사 중심 작품 세 편을 선정했습니다."
+}
+[Recommend][attempt=1][finishReason] stop
+INFO:     49.167.119.60:0 - "POST /api/recommend HTTP/1.1" 200 OK

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "p01_calm",
+    "description": "나른하고 편안한 저자극 상태",
+    "profile": {
+      "mood": -1,
+      "energy": -1,
+      "complexity": 0,
+      "patience": 2,
+      "visual_style": -2,
+      "ending_style": -2,
+      "inner_need": -2,
+      "temperature": 1,
+      "priority": ["story"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p02_down",
+    "description": "기분이 조금 가라앉은 상태",
+    "profile": {
+      "mood": -1,
+      "energy": -1,
+      "complexity": 0,
+      "patience": 2,
+      "visual_style": -2,
+      "ending_style": 2,
+      "inner_need": -1,
+      "temperature": -1,
+      "priority": ["story"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p03_energy",
+    "description": "에너지가 넘치고 텐션 높은 상태",
+    "profile": {
+      "mood": 2,
+      "energy": 2,
+      "complexity": 0,
+      "patience": -2,
+      "visual_style": 2,
+      "ending_style": -2,
+      "inner_need": 2,
+      "temperature": 2,
+      "priority": ["visual"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p04_neutral",
+    "description": "무난하고 중립적인 상태",
+    "profile": {
+      "mood": 0,
+      "energy": 0,
+      "complexity": 0,
+      "patience": 0,
+      "visual_style": null,
+      "ending_style": 0,
+      "inner_need": null,
+      "temperature": null,
+      "priority": [],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p05_story",
+    "description": "스토리 중심 선호",
+    "profile": {
+      "mood": 0,
+      "energy": 0,
+      "complexity": 2,
+      "patience": 2,
+      "visual_style": -2,
+      "ending_style": 2,
+      "inner_need": null,
+      "temperature": null,
+      "priority": ["story"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p06_visual",
+    "description": "영상미 중심 선호",
+    "profile": {
+      "mood": 0,
+      "energy": 0,
+      "complexity": 0,
+      "patience": 0,
+      "visual_style": 2,
+      "ending_style": 2,
+      "inner_need": null,
+      "temperature": 1,
+      "priority": ["visual"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p07_fast",
+    "description": "빠른 전개 선호",
+    "profile": {
+      "mood": 1,
+      "energy": 1,
+      "complexity": 0,
+      "patience": -2,
+      "visual_style": null,
+      "ending_style": -2,
+      "inner_need": 1,
+      "temperature": null,
+      "priority": ["story"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p08_complex",
+    "description": "복잡한 플롯 선호",
+    "profile": {
+      "mood": 0,
+      "energy": 1,
+      "complexity": 2,
+      "patience": 2,
+      "visual_style": -2,
+      "ending_style": 2,
+      "inner_need": null,
+      "temperature": null,
+      "priority": ["story"],
+      "avoidance": []
+    }
+  },
+  {
+    "id": "p09_comfort",
+    "description": "위로와 힐링이 필요한 상태",
+    "profile": {
+      "mood": -1,
+      "energy": -1,
+      "complexity": -2,
+      "patience": 2,
+      "visual_style": -2,
+      "ending_style": -2,
+      "inner_need": -2,
+      "temperature": 2,
+      "priority": ["story"],
+      "avoidance": ["gore", "horror"]
+    }
+  },
+  {
+    "id": "p10_intense",
+    "description": "강한 자극과 몰입을 원하는 상태",
+    "profile": {
+      "mood": 2,
+      "energy": 2,
+      "complexity": 2,
+      "patience": -2,
+      "visual_style": 2,
+      "ending_style": 2,
+      "inner_need": 2,
+      "temperature": -2,
+      "priority": ["visual", "story"],
+      "avoidance": []
+    }
+  }
+]

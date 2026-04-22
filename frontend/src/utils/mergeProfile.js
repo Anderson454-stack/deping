@@ -2,6 +2,7 @@
  * userProfile 병합 헬퍼
  * - null/undefined 값은 기존값 유지
  * - priority, avoidance 배열은 중복 제거 후 누적
+ * - genres 배열은 최신 사용자 의도를 앞에 두고 누적
  * - 그 외 숫자 필드는 새 값으로 덮어씀
  *
  * @param {Object} prev    - 현재 userProfile
@@ -16,6 +17,9 @@ export function mergeProfile(prev, updates) {
     if (key === 'priority' || key === 'avoidance') {
       const arr = Array.isArray(val) ? val : [val];
       next[key] = [...new Set([...(prev[key] || []), ...arr])];
+    } else if (key === 'genres') {
+      const arr = Array.isArray(val) ? val : [val];
+      next[key] = [...new Set([...arr, ...(prev[key] || [])])];
     } else {
       next[key] = val;
     }

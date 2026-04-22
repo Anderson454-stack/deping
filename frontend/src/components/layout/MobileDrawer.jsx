@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NAV_ITEMS = [
   { to: '/',         icon: 'theaters',  label: 'Cinema',   ready: true  },
   { to: '/discover', icon: 'explore',   label: 'Discover', ready: false },
-  { to: '/journal',  icon: 'menu_book', label: 'Journal',  ready: false },
+  { to: '/journal',  icon: 'menu_book', label: 'Journal',  ready: true  },
 ];
 
 const MobileDrawer = ({ isOpen, onClose }) => {

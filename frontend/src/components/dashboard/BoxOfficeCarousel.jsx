@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useNavigate } from 'react-router-dom';
+import { getTheaterLinks } from '../../utils/theaterLinks';
 
 /**
  * 박스오피스 캐러셀 (CVG 스타일)
@@ -67,6 +68,7 @@ const BoxOfficeCarousel = ({ movies }) => {
           {movies.map((movie, idx) => {
             const isActive = idx === selectedIndex;
             const movieId = movie.tmdb_id || movie.id || idx;
+            const theaterLinks = getTheaterLinks(movie.title_ko || movie.title);
             return (
               <div
                 key={movieId}
@@ -163,16 +165,34 @@ const BoxOfficeCarousel = ({ movies }) => {
                         )}
                       </div>
 
-                      {/* 예매하기 버튼 */}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          navigate(`/movie/${movieId}`, { state: { movie } });
-                        }}
-                        className="w-full py-2 rounded-xl ruby-gradient text-white text-[11px] font-bold tracking-wide hover:opacity-90 transition-opacity"
-                      >
-                        상세 보기
-                      </button>
+                      <div className="space-y-2">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/movie/${movieId}`, { state: { movie } });
+                          }}
+                          className="w-full py-2 rounded-xl ruby-gradient text-white text-[11px] font-bold tracking-wide hover:opacity-90 transition-opacity"
+                        >
+                          상세 보기
+                        </button>
+                        <div className="flex flex-wrap gap-1.5" onClick={(event) => event.stopPropagation()}>
+                          {theaterLinks.map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-2.5 py-1 rounded-full text-[10px] font-bold"
+                              style={{
+                                background: 'var(--color-surface-container-high)',
+                                color: 'var(--color-on-surface)',
+                              }}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

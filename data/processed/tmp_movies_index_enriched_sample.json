@@ -1,0 +1,51 @@
+[
+  {
+    "id": "45035",
+    "title": "왕의 남자",
+    "title_ko": "왕의 남자",
+    "year": 2005,
+    "genres": [
+      "드라마",
+      "역사",
+      "스릴러"
+    ],
+    "runtime": 119,
+    "rating_imdb": 6.9,
+    "overview": "조선시대 연산조. 남사당패의 광대 장생은 힘있는 양반들에게 농락당하던 생활을 거부하고, 자신의 하나뿐인 친구이자 최고의 동료인 공길과 보다 큰 놀이판을 찾아 한양으로 올라온다. 타고난 재주와 카리스마로 놀이패 무리를 이끌게 된 장생은 공길과 함께 연산과 그의 애첩인 녹수를 풍자하는 놀이판을 벌여 한양의 명물이 된다. 공연은 대 성공을 이루지만, 그들은 왕을 희롱한 죄로 의금부로 끌려간다. 의금부에서 문초에 시달리던 장생은 특유의 당당함을 발휘해 왕을 웃겨 보이겠다고 호언장담하지만 막상 왕 앞에서 공연을 시작하자 모든 광대들이 얼어붙는다. 장생 역시 극도의 긴장감 속에서 왕을 웃기기 위해 갖은 노력을 하지만 왕은 꿈쩍도 하지 않는데...",
+    "director": "이준익",
+    "tmdb_id": 45035,
+    "cast": [
+      "감우성",
+      "이준기",
+      "정진영",
+      "강성연",
+      "유해진"
+    ],
+    "poster_url": "https://image.tmdb.org/t/p/w500/9oucBWXrvBEelzUjPQheImlb8D1.jpg",
+    "keywords": [
+      "friendship",
+      "jealousy",
+      "gambling",
+      "suicide attempt",
+      "clown",
+      "palace",
+      "based on play or musical",
+      "historical figure",
+      "royalty",
+      "bromance",
+      "historical fiction",
+      "king",
+      "jester",
+      "joseon dynasty (1392–1910)",
+      "boys' love (bl)",
+      "bisexual",
+      "psychological romance"
+    ],
+    "audience_count": 10502326,
+    "pacing": "medium",
+    "plot_complexity": 3,
+    "emotional_intensity": 4,
+    "visual_score": 0.78,
+    "sentiment_score": 0.82
+  }
+]

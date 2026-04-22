@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getTheaterLinks } from '../../utils/theaterLinks';
 
 /**
  * 박스오피스 TOP 5 카드 컴포넌트 (Task H)
@@ -8,14 +9,16 @@ import { useNavigate } from 'react-router-dom';
  */
 const BoxOfficeCard = ({ movie, rank }) => {
   const navigate = useNavigate();
+  const movieId = movie.tmdb_id || movie.id;
+  const theaterLinks = getTheaterLinks(movie.title_ko || movie.title);
 
   return (
     <div 
-      onClick={() => navigate(`/movie/${movie.tmdb_id || movie.id}`)}
+      onClick={() => navigate(`/movie/${movieId}`, { state: { movie } })}
       className="group relative bg-surface-container-low rounded-3xl p-4 cinematic-shadow cursor-pointer hover:bg-surface-container-high transition-all h-full flex flex-col"
     >
       {/* 순위 배지 (Cinematic Style) */}
-      <div className="absolute top-6 left-6 z-10 w-10 h-10 ruby-gradient text-white text-lg font-black rounded-full flex items-center justify-center shadow-xl border-2 border-white/10 group-hover:scale-110 transition-transform">
+      <div className="absolute top-6 left-6 z-10 w-10 h-10 ruby-gradient text-white text-lg font-black rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
         {rank}
       </div>
 
@@ -44,11 +47,32 @@ const BoxOfficeCard = ({ movie, rank }) => {
         </h4>
         <div className="flex items-center justify-between">
           <p className="text-xs text-on-surface-variant/80 font-medium">
-            {movie.audi_acc ? `누적 ${Number(movie.audi_acc).toLocaleString()}명` : '상영 중'}
+            {movie.audience_acc
+              ? `누적 ${Number(movie.audience_acc).toLocaleString()}명`
+              : movie.audi_acc
+              ? `누적 ${Number(movie.audi_acc).toLocaleString()}명`
+              : '상영 중'}
           </p>
           <span className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">
             TOP {rank}
           </span>
+        </div>
+        <div className="flex flex-wrap gap-2 mt-4" onClick={(event) => event.stopPropagation()}>
+          {theaterLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-full text-[11px] font-bold"
+              style={{
+                background: 'var(--color-surface-raised)',
+                color: 'var(--color-on-surface)',
+              }}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       </div>
     </div>

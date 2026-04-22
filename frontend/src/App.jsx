@@ -17,6 +17,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/"           element={<Dashboard />} />
         <Route path="/chat"       element={<ChatGuide />} />
+        <Route path="/chatguide"  element={<ChatGuide />} />
         <Route path="/movie/:id?" element={<MovieDetail />} />
         <Route path="/discover"   element={<ComingSoon />} />
         <Route path="/journal"    element={<Journal />} />

@@ -1,0 +1,1882 @@
+[
+  {
+    "profile_id": "p01_calm",
+    "description": "나른하고 편안한 저자극 상태",
+    "hybrid_results": [
+      {
+        "doc_id": "14306",
+        "title": "말리와 나",
+        "search_score": 0.022130286321043968,
+        "rerank_score": 2.485090970993042,
+        "final_rank_score": 8.127403
+      },
+      {
+        "doc_id": "309054",
+        "title": "사랑을 놓치다",
+        "search_score": 0.03369728848338127,
+        "rerank_score": 2.056272029876709,
+        "final_rank_score": 7.752513
+      },
+      {
+        "doc_id": "13688",
+        "title": "CJ7:장강7호",
+        "search_score": 0.035063114017248154,
+        "rerank_score": 2.1643407344818115,
+        "final_rank_score": 7.528085
+      },
+      {
+        "doc_id": "243767",
+        "title": "남쪽으로 튀어",
+        "search_score": 0.023512180894613266,
+        "rerank_score": 2.2744476795196533,
+        "final_rank_score": 7.496855
+      },
+      {
+        "doc_id": "193689",
+        "title": "고령화 가족",
+        "search_score": 0.028096605092287064,
+        "rerank_score": 2.067615032196045,
+        "final_rank_score": 7.480942
+      },
+      {
+        "doc_id": "60024",
+        "title": "맨발의 기봉이",
+        "search_score": 0.017662622034549713,
+        "rerank_score": 2.1218044757843018,
+        "final_rank_score": 7.033076
+      },
+      {
+        "doc_id": "36329",
+        "title": "파주",
+        "search_score": 0.017246471717953682,
+        "rerank_score": 1.9143956899642944,
+        "final_rank_score": 6.960434
+      },
+      {
+        "doc_id": "420814",
+        "title": "곰돌이 푸 다시 만나 행복해",
+        "search_score": 0.027000777423381805,
+        "rerank_score": 2.0702733993530273,
+        "final_rank_score": 6.887821
+      },
+      {
+        "doc_id": "1466115",
+        "title": "오늘 밤, 세계에서 이 사랑이 사라진다 해도",
+        "search_score": 0.02322116121649742,
+        "rerank_score": 1.7511626482009888,
+        "final_rank_score": 6.826709
+      },
+      {
+        "doc_id": "1581",
+        "title": "로맨틱 홀리데이",
+        "search_score": 0.017246507108211517,
+        "rerank_score": 2.152310848236084,
+        "final_rank_score": 6.824179
+      },
+      {
+        "doc_id": "254375",
+        "title": "꾸뻬씨의 행복여행",
+        "search_score": 0.02142857201397419,
+        "rerank_score": 1.9613628387451172,
+        "final_rank_score": 6.805517
+      },
+      {
+        "doc_id": "499028",
+        "title": "지금, 만나러 갑니다",
+        "search_score": 0.028293831273913383,
+        "rerank_score": 1.9847577810287476,
+        "final_rank_score": 6.582567
+      },
+      {
+        "doc_id": "208874",
+        "title": "내 생애 가장 아름다운 일주일",
+        "search_score": 0.02827027067542076,
+        "rerank_score": 1.8667196035385132,
+        "final_rank_score": 6.528429
+      },
+      {
+        "doc_id": "471335",
+        "title": "치즈인더트랩",
+        "search_score": 0.028082549571990967,
+        "rerank_score": 1.9477157592773438,
+        "final_rank_score": 6.52123
+      },
+      {
+        "doc_id": "16447",
+        "title": "여자는 남자의 미래다",
+        "search_score": 0.01924119144678116,
+        "rerank_score": 1.6490755081176758,
+        "final_rank_score": 6.516468
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 122.63042
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 117.09469
+      },
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 102.915115
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 101.78045
+      },
+      {
+        "doc_id": "309054",
+        "title": "사랑을 놓치다",
+        "search_score": 98.3551
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 72.03611
+      },
+      {
+        "doc_id": "471335",
+        "title": "치즈인더트랩",
+        "search_score": 71.72451
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 66.72747
+      },
+      {
+        "doc_id": "476968",
+        "title": "바울",
+        "search_score": 65.59437
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 63.299206
+      },
+      {
+        "doc_id": "695199",
+        "title": "소울",
+        "search_score": 63.126934
+      },
+      {
+        "doc_id": "75674",
+        "title": "액트 오브 밸러: 최정예 특수부대",
+        "search_score": 59.543293
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 58.409676
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 58.097244
+      },
+      {
+        "doc_id": "418487",
+        "title": "회복",
+        "search_score": 57.37848
+      }
+    ]
+  },
+  {
+    "profile_id": "p02_down",
+    "description": "기분이 조금 가라앉은 상태",
+    "hybrid_results": [
+      {
+        "doc_id": "309054",
+        "title": "사랑을 놓치다",
+        "search_score": 0.0290178582072258,
+        "rerank_score": 2.1424522399902344,
+        "final_rank_score": 8.006375
+      },
+      {
+        "doc_id": "36329",
+        "title": "파주",
+        "search_score": 0.020541636273264885,
+        "rerank_score": 1.992733359336853,
+        "final_rank_score": 7.198742
+      },
+      {
+        "doc_id": "134768",
+        "title": "조용한 세상",
+        "search_score": 0.019046803936362267,
+        "rerank_score": 2.147658586502075,
+        "final_rank_score": 7.112023
+      },
+      {
+        "doc_id": "1466115",
+        "title": "오늘 밤, 세계에서 이 사랑이 사라진다 해도",
+        "search_score": 0.031501833349466324,
+        "rerank_score": 1.7589609622955322,
+        "final_rank_score": 6.858385
+      },
+      {
+        "doc_id": "208874",
+        "title": "내 생애 가장 아름다운 일주일",
+        "search_score": 0.027875587344169617,
+        "rerank_score": 1.912091612815857,
+        "final_rank_score": 6.66415
+      },
+      {
+        "doc_id": "193689",
+        "title": "고령화 가족",
+        "search_score": 0.026839692145586014,
+        "rerank_score": 1.7880274057388306,
+        "final_rank_score": 6.640922
+      },
+      {
+        "doc_id": "723562",
+        "title": "여배우들",
+        "search_score": 0.01942327246069908,
+        "rerank_score": 1.5420258045196533,
+        "final_rank_score": 6.545501
+      },
+      {
+        "doc_id": "5488",
+        "title": "싸이보그지만 괜찮아",
+        "search_score": 0.018093667924404144,
+        "rerank_score": 1.8697326183319092,
+        "final_rank_score": 6.527292
+      },
+      {
+        "doc_id": "243767",
+        "title": "남쪽으로 튀어",
+        "search_score": 0.02238805964589119,
+        "rerank_score": 1.9450572729110718,
+        "final_rank_score": 6.50756
+      },
+      {
+        "doc_id": "602508",
+        "title": "암전",
+        "search_score": 0.0357142873108387,
+        "rerank_score": 1.9131550788879395,
+        "final_rank_score": 6.37518
+      },
+      {
+        "doc_id": "55334",
+        "title": "방황하는 칼날",
+        "search_score": 0.021739130839705467,
+        "rerank_score": 1.8532497882843018,
+        "final_rank_score": 6.231488
+      },
+      {
+        "doc_id": "38167",
+        "title": "먹고 기도하고 사랑하라",
+        "search_score": 0.019276263192296028,
+        "rerank_score": 1.8599846363067627,
+        "final_rank_score": 6.19923
+      },
+      {
+        "doc_id": "540550",
+        "title": "DMZ, 비무장지대",
+        "search_score": 0.032786883413791656,
+        "rerank_score": 1.9346004724502563,
+        "final_rank_score": 6.186588
+      },
+      {
+        "doc_id": "16447",
+        "title": "여자는 남자의 미래다",
+        "search_score": 0.026844218373298645,
+        "rerank_score": 1.5342274904251099,
+        "final_rank_score": 6.179527
+      },
+      {
+        "doc_id": "13688",
+        "title": "CJ7:장강7호",
+        "search_score": 0.028996100649237633,
+        "rerank_score": 1.705790638923645,
+        "final_rank_score": 6.146368
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 74.856186
+      },
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 74.5751
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 66.68814
+      },
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 66.68557
+      },
+      {
+        "doc_id": "309054",
+        "title": "사랑을 놓치다",
+        "search_score": 51.996517
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 44.949528
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 44.58559
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 43.022694
+      },
+      {
+        "doc_id": "418487",
+        "title": "회복",
+        "search_score": 40.413628
+      },
+      {
+        "doc_id": "476968",
+        "title": "바울",
+        "search_score": 39.08728
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 38.959545
+      },
+      {
+        "doc_id": "424998",
+        "title": "예수는 역사다",
+        "search_score": 38.415577
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 37.173607
+      },
+      {
+        "doc_id": "75674",
+        "title": "액트 오브 밸러: 최정예 특수부대",
+        "search_score": 37.114628
+      },
+      {
+        "doc_id": "38700",
+        "title": "나쁜 녀석들: 포에버",
+        "search_score": 36.69247
+      }
+    ]
+  },
+  {
+    "profile_id": "p03_energy",
+    "description": "에너지가 넘치고 텐션 높은 상태",
+    "hybrid_results": [
+      {
+        "doc_id": "24428",
+        "title": "어벤져스",
+        "search_score": 0.04071919620037079,
+        "rerank_score": 2.0096592903137207,
+        "final_rank_score": 7.969697
+      },
+      {
+        "doc_id": "976573",
+        "title": "엘리멘탈",
+        "search_score": 0.017387405037879944,
+        "rerank_score": 1.71288001537323,
+        "final_rank_score": 7.606027
+      },
+      {
+        "doc_id": "11054",
+        "title": "헤어스프레이",
+        "search_score": 0.022161172702908516,
+        "rerank_score": 1.8800121545791626,
+        "final_rank_score": 7.562198
+      },
+      {
+        "doc_id": "157336",
+        "title": "인터스텔라",
+        "search_score": 0.02054794505238533,
+        "rerank_score": 1.9946829080581665,
+        "final_rank_score": 7.554597
+      },
+      {
+        "doc_id": "1726",
+        "title": "아이언맨",
+        "search_score": 0.01919044926762581,
+        "rerank_score": 1.9450572729110718,
+        "final_rank_score": 7.404362
+      },
+      {
+        "doc_id": "33196",
+        "title": "해운대",
+        "search_score": 0.023224325850605965,
+        "rerank_score": 1.6412771940231323,
+        "final_rank_score": 7.397056
+      },
+      {
+        "doc_id": "332567",
+        "title": "언더 워터",
+        "search_score": 0.025792254135012627,
+        "rerank_score": 1.7936989068984985,
+        "final_rank_score": 7.306889
+      },
+      {
+        "doc_id": "262504",
+        "title": "다이버전트 시리즈: 얼리전트",
+        "search_score": 0.01723949797451496,
+        "rerank_score": 1.7908631563186646,
+        "final_rank_score": 7.289829
+      },
+      {
+        "doc_id": "374720",
+        "title": "덩케르크",
+        "search_score": 0.019122809171676636,
+        "rerank_score": 1.8238288164138794,
+        "final_rank_score": 7.040609
+      },
+      {
+        "doc_id": "353081",
+        "title": "미션 임파서블: 폴아웃",
+        "search_score": 0.019736841320991516,
+        "rerank_score": 1.507287859916687,
+        "final_rank_score": 6.9916
+      },
+      {
+        "doc_id": "299534",
+        "title": "어벤져스: 엔드게임",
+        "search_score": 0.024914639070630074,
+        "rerank_score": 1.784482717514038,
+        "final_rank_score": 6.928363
+      },
+      {
+        "doc_id": "350650",
+        "title": "극장판 도라에몽 : 진구의 우주영웅기~스페이스 히어로즈~",
+        "search_score": 0.020432692021131516,
+        "rerank_score": 1.9565775394439697,
+        "final_rank_score": 6.890165
+      },
+      {
+        "doc_id": "51497",
+        "title": "분노의 질주: 언리미티드",
+        "search_score": 0.025280646979808807,
+        "rerank_score": 1.8142582178115845,
+        "final_rank_score": 6.818055
+      },
+      {
+        "doc_id": "38700",
+        "title": "나쁜 녀석들: 포에버",
+        "search_score": 0.022100120782852173,
+        "rerank_score": 1.6185911893844604,
+        "final_rank_score": 6.777874
+      },
+      {
+        "doc_id": "363088",
+        "title": "앤트맨과 와스프",
+        "search_score": 0.017490843310952187,
+        "rerank_score": 1.6157554388046265,
+        "final_rank_score": 6.764757
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 32.7618
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 31.000305
+      },
+      {
+        "doc_id": "24428",
+        "title": "어벤져스",
+        "search_score": 29.383028
+      },
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 26.900747
+      },
+      {
+        "doc_id": "22520",
+        "title": "아치와 씨팍",
+        "search_score": 26.289932
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 26.075243
+      },
+      {
+        "doc_id": "536000",
+        "title": "극장판 헬로카봇 : 백악기 시대",
+        "search_score": 25.768295
+      },
+      {
+        "doc_id": "77950",
+        "title": "터보",
+        "search_score": 25.67229
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 24.98369
+      },
+      {
+        "doc_id": "939243",
+        "title": "수퍼 소닉",
+        "search_score": 23.471502
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 23.372566
+      },
+      {
+        "doc_id": "270946",
+        "title": "마다가스카의 펭귄",
+        "search_score": 22.37605
+      },
+      {
+        "doc_id": "8966",
+        "title": "트와일라잇",
+        "search_score": 22.339947
+      },
+      {
+        "doc_id": "572151",
+        "title": "기묘한 가족",
+        "search_score": 21.353054
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 20.83633
+      }
+    ]
+  },
+  {
+    "profile_id": "p04_neutral",
+    "description": "무난하고 중립적인 상태",
+    "hybrid_results": [
+      {
+        "doc_id": "22824",
+        "title": "포스 카인드",
+        "search_score": 0.018987342715263367,
+        "rerank_score": 1.695865511894226,
+        "final_rank_score": 6.556584
+      },
+      {
+        "doc_id": "540550",
+        "title": "DMZ, 비무장지대",
+        "search_score": 0.03194444626569748,
+        "rerank_score": 1.6519112586975098,
+        "final_rank_score": 6.437678
+      },
+      {
+        "doc_id": "37686",
+        "title": "슈퍼 에이트",
+        "search_score": 0.02232542261481285,
+        "rerank_score": 1.629225254058838,
+        "final_rank_score": 6.360001
+      },
+      {
+        "doc_id": "38700",
+        "title": "나쁜 녀석들: 포에버",
+        "search_score": 0.01731150969862938,
+        "rerank_score": 1.612210750579834,
+        "final_rank_score": 6.303944
+      },
+      {
+        "doc_id": "64846",
+        "title": "마이 블랙 미니드레스",
+        "search_score": 0.02149350568652153,
+        "rerank_score": 1.418670654296875,
+        "final_rank_score": 6.277505
+      },
+      {
+        "doc_id": "1268",
+        "title": "미스터 빈의 홀리데이",
+        "search_score": 0.0211267601698637,
+        "rerank_score": 1.5845621824264526,
+        "final_rank_score": 6.224813
+      },
+      {
+        "doc_id": "33196",
+        "title": "해운대",
+        "search_score": 0.021656593307852745,
+        "rerank_score": 1.5519510507583618,
+        "final_rank_score": 6.12751
+      },
+      {
+        "doc_id": "80278",
+        "title": "더 임파서블",
+        "search_score": 0.01975100114941597,
+        "rerank_score": 1.5264291763305664,
+        "final_rank_score": 6.049039
+      },
+      {
+        "doc_id": "466272",
+        "title": "원스 어폰 어 타임... 인 할리우드",
+        "search_score": 0.0213780514895916,
+        "rerank_score": 1.522884488105774,
+        "final_rank_score": 6.040032
+      },
+      {
+        "doc_id": "840464",
+        "title": "그린랜드",
+        "search_score": 0.019253995269536972,
+        "rerank_score": 1.5065789222717285,
+        "final_rank_score": 5.988991
+      },
+      {
+        "doc_id": "1581",
+        "title": "로맨틱 홀리데이",
+        "search_score": 0.022878028452396393,
+        "rerank_score": 1.501616358757019,
+        "final_rank_score": 5.977727
+      },
+      {
+        "doc_id": "17654",
+        "title": "디스트릭트 9",
+        "search_score": 0.018487395718693733,
+        "rerank_score": 1.5009074211120605,
+        "final_rank_score": 5.97121
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 0.028096478432416916,
+        "rerank_score": 1.4753856658935547,
+        "final_rank_score": 5.904253
+      },
+      {
+        "doc_id": "350650",
+        "title": "극장판 도라에몽 : 진구의 우주영웅기~스페이스 히어로즈~",
+        "search_score": 0.029999999329447746,
+        "rerank_score": 1.4690052270889282,
+        "final_rank_score": 5.887016
+      },
+      {
+        "doc_id": "23538",
+        "title": "비열한 거리",
+        "search_score": 0.018960637971758842,
+        "rerank_score": 1.4654605388641357,
+        "final_rank_score": 5.865342
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 24.384329
+      },
+      {
+        "doc_id": "13688",
+        "title": "CJ7:장강7호",
+        "search_score": 23.06716
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 22.154055
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 21.370548
+      },
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 16.3809
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 15.726895
+      },
+      {
+        "doc_id": "1052433",
+        "title": "30일",
+        "search_score": 15.721164
+      },
+      {
+        "doc_id": "748783",
+        "title": "가필드",
+        "search_score": 12.968469
+      },
+      {
+        "doc_id": "75674",
+        "title": "액트 오브 밸러: 최정예 특수부대",
+        "search_score": 11.908658
+      },
+      {
+        "doc_id": "695199",
+        "title": "소울",
+        "search_score": 11.657613
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 11.158403
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 10.485882
+      },
+      {
+        "doc_id": "602508",
+        "title": "암전",
+        "search_score": 10.4832115
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 10.47947
+      },
+      {
+        "doc_id": "418487",
+        "title": "회복",
+        "search_score": 10.318182
+      }
+    ]
+  },
+  {
+    "profile_id": "p05_story",
+    "description": "스토리 중심 선호",
+    "hybrid_results": [
+      {
+        "doc_id": "14164",
+        "title": "드래곤볼 에볼루션",
+        "search_score": 0.02521205134689808,
+        "rerank_score": 1.4441924095153809,
+        "final_rank_score": 6.157789
+      },
+      {
+        "doc_id": "670",
+        "title": "올드보이",
+        "search_score": 0.025218794122338295,
+        "rerank_score": 1.8238288164138794,
+        "final_rank_score": 6.096705
+      },
+      {
+        "doc_id": "540550",
+        "title": "DMZ, 비무장지대",
+        "search_score": 0.0293898805975914,
+        "rerank_score": 1.8114224672317505,
+        "final_rank_score": 5.813657
+      },
+      {
+        "doc_id": "23538",
+        "title": "비열한 거리",
+        "search_score": 0.016729947179555893,
+        "rerank_score": 1.6965744495391846,
+        "final_rank_score": 5.756453
+      },
+      {
+        "doc_id": "22824",
+        "title": "포스 카인드",
+        "search_score": 0.022802777588367462,
+        "rerank_score": 1.6809778213500977,
+        "final_rank_score": 5.715736
+      },
+      {
+        "doc_id": "374720",
+        "title": "덩케르크",
+        "search_score": 0.018959328532218933,
+        "rerank_score": 1.6462397575378418,
+        "final_rank_score": 5.557679
+      },
+      {
+        "doc_id": "496243",
+        "title": "기생충",
+        "search_score": 0.023076923564076424,
+        "rerank_score": 1.5873979330062866,
+        "final_rank_score": 5.385271
+      },
+      {
+        "doc_id": "37686",
+        "title": "슈퍼 에이트",
+        "search_score": 0.02032386139035225,
+        "rerank_score": 1.6412771940231323,
+        "final_rank_score": 5.294155
+      },
+      {
+        "doc_id": "475557",
+        "title": "조커",
+        "search_score": 0.024932388216257095,
+        "rerank_score": 1.510123610496521,
+        "final_rank_score": 5.155303
+      },
+      {
+        "doc_id": "80278",
+        "title": "더 임파서블",
+        "search_score": 0.025582946836948395,
+        "rerank_score": 1.5512421131134033,
+        "final_rank_score": 5.029309
+      },
+      {
+        "doc_id": "466272",
+        "title": "원스 어폰 어 타임... 인 할리우드",
+        "search_score": 0.023578248918056488,
+        "rerank_score": 1.5484063625335693,
+        "final_rank_score": 5.018797
+      },
+      {
+        "doc_id": "318846",
+        "title": "빅쇼트",
+        "search_score": 0.01907271146774292,
+        "rerank_score": 1.435685157775879,
+        "final_rank_score": 4.976128
+      },
+      {
+        "doc_id": "303126",
+        "title": "레드카펫",
+        "search_score": 0.021685823798179626,
+        "rerank_score": 1.6462397575378418,
+        "final_rank_score": 4.960405
+      },
+      {
+        "doc_id": "1590197",
+        "title": "환생",
+        "search_score": 0.024560222402215004,
+        "rerank_score": 1.522884488105774,
+        "final_rank_score": 4.943214
+      },
+      {
+        "doc_id": "17654",
+        "title": "디스트릭트 9",
+        "search_score": 0.02154405415058136,
+        "rerank_score": 1.510123610496521,
+        "final_rank_score": 4.901915
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 32.7618
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 31.191956
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 31.000305
+      },
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 24.384329
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 24.169584
+      },
+      {
+        "doc_id": "13688",
+        "title": "CJ7:장강7호",
+        "search_score": 23.06716
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 22.093864
+      },
+      {
+        "doc_id": "424998",
+        "title": "예수는 역사다",
+        "search_score": 21.319923
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 20.85615
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 20.83633
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 19.405628
+      },
+      {
+        "doc_id": "602464",
+        "title": "영웅",
+        "search_score": 17.675304
+      },
+      {
+        "doc_id": "574303",
+        "title": "악질경찰",
+        "search_score": 17.395287
+      },
+      {
+        "doc_id": "696047",
+        "title": "시민덕희",
+        "search_score": 17.285841
+      },
+      {
+        "doc_id": "16140",
+        "title": "데스노트 : 라스트 네임",
+        "search_score": 17.225847
+      }
+    ]
+  },
+  {
+    "profile_id": "p06_visual",
+    "description": "영상미 중심 선호",
+    "hybrid_results": [
+      {
+        "doc_id": "254",
+        "title": "킹콩",
+        "search_score": 0.03211577236652374,
+        "rerank_score": 1.701537013053894,
+        "final_rank_score": 7.586727
+      },
+      {
+        "doc_id": "540550",
+        "title": "DMZ, 비무장지대",
+        "search_score": 0.030291108414530754,
+        "rerank_score": 1.8564399480819702,
+        "final_rank_score": 7.499611
+      },
+      {
+        "doc_id": "7191",
+        "title": "클로버필드",
+        "search_score": 0.02083333395421505,
+        "rerank_score": 1.812131404876709,
+        "final_rank_score": 7.357228
+      },
+      {
+        "doc_id": "17654",
+        "title": "디스트릭트 9",
+        "search_score": 0.020891515538096428,
+        "rerank_score": 1.599449872970581,
+        "final_rank_score": 7.269241
+      },
+      {
+        "doc_id": "37686",
+        "title": "슈퍼 에이트",
+        "search_score": 0.023156147450208664,
+        "rerank_score": 1.7745575904846191,
+        "final_rank_score": 7.246829
+      },
+      {
+        "doc_id": "373571",
+        "title": "고질라: 킹 오브 몬스터",
+        "search_score": 0.017782218754291534,
+        "rerank_score": 1.5533689260482788,
+        "final_rank_score": 7.127889
+      },
+      {
+        "doc_id": "61791",
+        "title": "혹성탈출: 진화의 시작",
+        "search_score": 0.017621567472815514,
+        "rerank_score": 1.5193397998809814,
+        "final_rank_score": 7.025641
+      },
+      {
+        "doc_id": "33196",
+        "title": "해운대",
+        "search_score": 0.021349020302295685,
+        "rerank_score": 1.5094146728515625,
+        "final_rank_score": 6.999593
+      },
+      {
+        "doc_id": "22824",
+        "title": "포스 카인드",
+        "search_score": 0.01785714365541935,
+        "rerank_score": 1.7703039646148682,
+        "final_rank_score": 6.878769
+      },
+      {
+        "doc_id": "119450",
+        "title": "혹성탈출: 반격의 서막",
+        "search_score": 0.022058824077248573,
+        "rerank_score": 1.415834903717041,
+        "final_rank_score": 6.719564
+      },
+      {
+        "doc_id": "466272",
+        "title": "원스 어폰 어 타임... 인 할리우드",
+        "search_score": 0.020091243088245392,
+        "rerank_score": 1.4044917821884155,
+        "final_rank_score": 6.683567
+      },
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 0.03809523954987526,
+        "rerank_score": 1.5703834295272827,
+        "final_rank_score": 6.649246
+      },
+      {
+        "doc_id": "1590197",
+        "title": "환생",
+        "search_score": 0.031018517911434174,
+        "rerank_score": 1.5725102424621582,
+        "final_rank_score": 6.648549
+      },
+      {
+        "doc_id": "1011477",
+        "title": "베스트 키드",
+        "search_score": 0.0285765640437603,
+        "rerank_score": 1.5484063625335693,
+        "final_rank_score": 6.573796
+      },
+      {
+        "doc_id": "783675",
+        "title": "더 퍼스트 슬램덩크",
+        "search_score": 0.022813361138105392,
+        "rerank_score": 1.3655002117156982,
+        "final_rank_score": 6.569314
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 24.384329
+      },
+      {
+        "doc_id": "13688",
+        "title": "CJ7:장강7호",
+        "search_score": 23.06716
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 22.154055
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 21.370548
+      },
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 16.3809
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 15.726895
+      },
+      {
+        "doc_id": "1052433",
+        "title": "30일",
+        "search_score": 15.721164
+      },
+      {
+        "doc_id": "453395",
+        "title": "닥터 스트레인지: 대혼돈의 멀티버스",
+        "search_score": 13.363076
+      },
+      {
+        "doc_id": "748783",
+        "title": "가필드",
+        "search_score": 12.968469
+      },
+      {
+        "doc_id": "75674",
+        "title": "액트 오브 밸러: 최정예 특수부대",
+        "search_score": 11.908658
+      },
+      {
+        "doc_id": "609681",
+        "title": "더 마블스",
+        "search_score": 11.813416
+      },
+      {
+        "doc_id": "695199",
+        "title": "소울",
+        "search_score": 11.657613
+      },
+      {
+        "doc_id": "497698",
+        "title": "블랙 위도우",
+        "search_score": 11.611698
+      },
+      {
+        "doc_id": "640146",
+        "title": "앤트맨과 와스프: 퀀텀매니아",
+        "search_score": 11.312082
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 11.158403
+      }
+    ]
+  },
+  {
+    "profile_id": "p07_fast",
+    "description": "빠른 전개 선호",
+    "hybrid_results": [
+      {
+        "doc_id": "133985",
+        "title": "무서운 이야기",
+        "search_score": 0.01785714365541935,
+        "rerank_score": 2.0011520385742188,
+        "final_rank_score": 7.471313
+      },
+      {
+        "doc_id": "755898",
+        "title": "우주전쟁",
+        "search_score": 0.01807228848338127,
+        "rerank_score": 1.995391845703125,
+        "final_rank_score": 7.454248
+      },
+      {
+        "doc_id": "345911",
+        "title": "라이트 아웃",
+        "search_score": 0.01998469978570938,
+        "rerank_score": 1.9443483352661133,
+        "final_rank_score": 7.30303
+      },
+      {
+        "doc_id": "3021",
+        "title": "1408",
+        "search_score": 0.02224675565958023,
+        "rerank_score": 1.9301695823669434,
+        "final_rank_score": 7.262756
+      },
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 0.021739130839705467,
+        "rerank_score": 1.9280427694320679,
+        "final_rank_score": 7.255867
+      },
+      {
+        "doc_id": "224141",
+        "title": "숲속으로",
+        "search_score": 0.0211267601698637,
+        "rerank_score": 1.916877031326294,
+        "final_rank_score": 7.221758
+      },
+      {
+        "doc_id": "76726",
+        "title": "크로니클",
+        "search_score": 0.024590162560343742,
+        "rerank_score": 1.8741635084152222,
+        "final_rank_score": 7.097081
+      },
+      {
+        "doc_id": "490132",
+        "title": "그린 북",
+        "search_score": 0.020551107823848724,
+        "rerank_score": 1.8743406534194946,
+        "final_rank_score": 7.093573
+      },
+      {
+        "doc_id": "61791",
+        "title": "혹성탈출: 진화의 시작",
+        "search_score": 0.02083333395421505,
+        "rerank_score": 2.1268556118011475,
+        "final_rank_score": 6.9514
+      },
+      {
+        "doc_id": "315846",
+        "title": "바닷마을 다이어리",
+        "search_score": 0.018518518656492233,
+        "rerank_score": 1.8167394399642944,
+        "final_rank_score": 6.918737
+      },
+      {
+        "doc_id": "950387",
+        "title": "A MINECRAFT MOVIE 마인크래프트 무비",
+        "search_score": 0.02500000223517418,
+        "rerank_score": 1.804332971572876,
+        "final_rank_score": 6.887999
+      },
+      {
+        "doc_id": "670",
+        "title": "올드보이",
+        "search_score": 0.027353081852197647,
+        "rerank_score": 2.08843994140625,
+        "final_rank_score": 6.842673
+      },
+      {
+        "doc_id": "22881",
+        "title": "블라인드 사이드",
+        "search_score": 0.01845238171517849,
+        "rerank_score": 1.7759754657745361,
+        "final_rank_score": 6.796379
+      },
+      {
+        "doc_id": "199771",
+        "title": "무서운 이야기 2",
+        "search_score": 0.01744186133146286,
+        "rerank_score": 1.978377342224121,
+        "final_rank_score": 6.752574
+      },
+      {
+        "doc_id": "22824",
+        "title": "포스 카인드",
+        "search_score": 0.024975024163722992,
+        "rerank_score": 2.056183338165283,
+        "final_rank_score": 6.743525
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 16.3809
+      },
+      {
+        "doc_id": "760497",
+        "title": "승부",
+        "search_score": 13.989966
+      },
+      {
+        "doc_id": "714651",
+        "title": "소년들",
+        "search_score": 13.385122
+      },
+      {
+        "doc_id": "424998",
+        "title": "예수는 역사다",
+        "search_score": 13.164423
+      },
+      {
+        "doc_id": "645985",
+        "title": "소방관",
+        "search_score": 12.738376
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 10.935461
+      },
+      {
+        "doc_id": "936243",
+        "title": "리바운드",
+        "search_score": 10.72109
+      },
+      {
+        "doc_id": "602464",
+        "title": "영웅",
+        "search_score": 10.5437765
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 10.370268
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 10.35686
+      },
+      {
+        "doc_id": "146724",
+        "title": "반창꼬",
+        "search_score": 10.16641
+      },
+      {
+        "doc_id": "581394",
+        "title": "1947 보스톤",
+        "search_score": 9.97334
+      },
+      {
+        "doc_id": "337404",
+        "title": "크루엘라",
+        "search_score": 9.856011
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 9.654619
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 9.629757
+      }
+    ]
+  },
+  {
+    "profile_id": "p08_complex",
+    "description": "복잡한 플롯 선호",
+    "hybrid_results": [
+      {
+        "doc_id": "670",
+        "title": "올드보이",
+        "search_score": 0.027353081852197647,
+        "rerank_score": 2.08843994140625,
+        "final_rank_score": 6.892673
+      },
+      {
+        "doc_id": "22824",
+        "title": "포스 카인드",
+        "search_score": 0.024975024163722992,
+        "rerank_score": 2.056183338165283,
+        "final_rank_score": 6.843525
+      },
+      {
+        "doc_id": "61791",
+        "title": "혹성탈출: 진화의 시작",
+        "search_score": 0.02083333395421505,
+        "rerank_score": 2.1268556118011475,
+        "final_rank_score": 6.7514
+      },
+      {
+        "doc_id": "496243",
+        "title": "기생충",
+        "search_score": 0.01666666753590107,
+        "rerank_score": 2.02587628364563,
+        "final_rank_score": 6.694296
+      },
+      {
+        "doc_id": "615",
+        "title": "패션 오브 크라이스트",
+        "search_score": 0.019682539626955986,
+        "rerank_score": 1.9852895736694336,
+        "final_rank_score": 6.575551
+      },
+      {
+        "doc_id": "44115",
+        "title": "127시간",
+        "search_score": 0.027614379301667213,
+        "rerank_score": 2.0359785556793213,
+        "final_rank_score": 6.48555
+      },
+      {
+        "doc_id": "7551",
+        "title": "데자뷰",
+        "search_score": 0.0234375,
+        "rerank_score": 2.0278258323669434,
+        "final_rank_score": 6.456915
+      },
+      {
+        "doc_id": "87827",
+        "title": "라이프 오브 파이",
+        "search_score": 0.017241379246115685,
+        "rerank_score": 1.9315874576568604,
+        "final_rank_score": 6.412004
+      },
+      {
+        "doc_id": "1046758",
+        "title": "쏘우 V",
+        "search_score": 0.01875000074505806,
+        "rerank_score": 1.9044705629348755,
+        "final_rank_score": 6.382162
+      },
+      {
+        "doc_id": "475557",
+        "title": "조커",
+        "search_score": 0.024310344830155373,
+        "rerank_score": 1.905534029006958,
+        "final_rank_score": 6.340912
+      },
+      {
+        "doc_id": "16140",
+        "title": "데스노트 : 라스트 네임",
+        "search_score": 0.02060810849070549,
+        "rerank_score": 1.9046478271484375,
+        "final_rank_score": 6.334552
+      },
+      {
+        "doc_id": "309809",
+        "title": "어린왕자",
+        "search_score": 0.024193547666072845,
+        "rerank_score": 1.984226107597351,
+        "final_rank_score": 6.326872
+      },
+      {
+        "doc_id": "37686",
+        "title": "슈퍼 에이트",
+        "search_score": 0.023076923564076424,
+        "rerank_score": 1.9787318706512451,
+        "final_rank_score": 6.309273
+      },
+      {
+        "doc_id": "199771",
+        "title": "무서운 이야기 2",
+        "search_score": 0.01744186133146286,
+        "rerank_score": 1.978377342224121,
+        "final_rank_score": 6.302574
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 0.02268066629767418,
+        "rerank_score": 1.9737693071365356,
+        "final_rank_score": 6.293989
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 16.3809
+      },
+      {
+        "doc_id": "760497",
+        "title": "승부",
+        "search_score": 13.989966
+      },
+      {
+        "doc_id": "714651",
+        "title": "소년들",
+        "search_score": 13.385122
+      },
+      {
+        "doc_id": "424998",
+        "title": "예수는 역사다",
+        "search_score": 13.164423
+      },
+      {
+        "doc_id": "645985",
+        "title": "소방관",
+        "search_score": 12.738376
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 10.935461
+      },
+      {
+        "doc_id": "936243",
+        "title": "리바운드",
+        "search_score": 10.72109
+      },
+      {
+        "doc_id": "602464",
+        "title": "영웅",
+        "search_score": 10.5437765
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 10.370268
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 10.35686
+      },
+      {
+        "doc_id": "146724",
+        "title": "반창꼬",
+        "search_score": 10.16641
+      },
+      {
+        "doc_id": "581394",
+        "title": "1947 보스톤",
+        "search_score": 9.97334
+      },
+      {
+        "doc_id": "337404",
+        "title": "크루엘라",
+        "search_score": 9.856011
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 9.654619
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 9.629757
+      }
+    ]
+  },
+  {
+    "profile_id": "p09_comfort",
+    "description": "위로와 힐링이 필요한 상태",
+    "hybrid_results": [
+      {
+        "doc_id": "14306",
+        "title": "말리와 나",
+        "search_score": 0.022130286321043968,
+        "rerank_score": 2.485090970993042,
+        "final_rank_score": 8.127403
+      },
+      {
+        "doc_id": "13688",
+        "title": "CJ7:장강7호",
+        "search_score": 0.035063114017248154,
+        "rerank_score": 2.1643407344818115,
+        "final_rank_score": 7.528085
+      },
+      {
+        "doc_id": "243767",
+        "title": "남쪽으로 튀어",
+        "search_score": 0.023512180894613266,
+        "rerank_score": 2.2744476795196533,
+        "final_rank_score": 7.496855
+      },
+      {
+        "doc_id": "60024",
+        "title": "맨발의 기봉이",
+        "search_score": 0.017662622034549713,
+        "rerank_score": 2.1218044757843018,
+        "final_rank_score": 7.033076
+      },
+      {
+        "doc_id": "420814",
+        "title": "곰돌이 푸 다시 만나 행복해",
+        "search_score": 0.027000777423381805,
+        "rerank_score": 2.0702733993530273,
+        "final_rank_score": 6.887821
+      },
+      {
+        "doc_id": "309054",
+        "title": "사랑을 놓치다",
+        "search_score": 0.03369728848338127,
+        "rerank_score": 2.056272029876709,
+        "final_rank_score": 6.852513
+      },
+      {
+        "doc_id": "1581",
+        "title": "로맨틱 홀리데이",
+        "search_score": 0.017298106104135513,
+        "rerank_score": 2.152310848236084,
+        "final_rank_score": 6.824231
+      },
+      {
+        "doc_id": "193689",
+        "title": "고령화 가족",
+        "search_score": 0.028096605092287064,
+        "rerank_score": 2.067615032196045,
+        "final_rank_score": 6.580942
+      },
+      {
+        "doc_id": "471335",
+        "title": "치즈인더트랩",
+        "search_score": 0.028082549571990967,
+        "rerank_score": 1.9477157592773438,
+        "final_rank_score": 6.52123
+      },
+      {
+        "doc_id": "77338",
+        "title": "언터처블: 1%의 우정",
+        "search_score": 0.021440822631120682,
+        "rerank_score": 1.9358410835266113,
+        "final_rank_score": 6.478964
+      },
+      {
+        "doc_id": "350650",
+        "title": "극장판 도라에몽 : 진구의 우주영웅기~스페이스 히어로즈~",
+        "search_score": 0.022018423303961754,
+        "rerank_score": 1.9436393976211548,
+        "final_rank_score": 6.202937
+      },
+      {
+        "doc_id": "55788",
+        "title": "뜨거운 것이 좋아",
+        "search_score": 0.01785714365541935,
+        "rerank_score": 1.6873582601547241,
+        "final_rank_score": 6.079932
+      },
+      {
+        "doc_id": "36329",
+        "title": "파주",
+        "search_score": 0.017246471717953682,
+        "rerank_score": 1.9143956899642944,
+        "final_rank_score": 6.060434
+      },
+      {
+        "doc_id": "1466115",
+        "title": "오늘 밤, 세계에서 이 사랑이 사라진다 해도",
+        "search_score": 0.02322116121649742,
+        "rerank_score": 1.7511626482009888,
+        "final_rank_score": 5.926709
+      },
+      {
+        "doc_id": "254375",
+        "title": "꾸뻬씨의 행복여행",
+        "search_score": 0.02142857201397419,
+        "rerank_score": 1.9613628387451172,
+        "final_rank_score": 5.905517
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 122.63042
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 117.09469
+      },
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 102.915115
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 101.78045
+      },
+      {
+        "doc_id": "309054",
+        "title": "사랑을 놓치다",
+        "search_score": 98.3551
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 72.03611
+      },
+      {
+        "doc_id": "471335",
+        "title": "치즈인더트랩",
+        "search_score": 71.72451
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 66.72747
+      },
+      {
+        "doc_id": "476968",
+        "title": "바울",
+        "search_score": 65.59437
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 63.299206
+      },
+      {
+        "doc_id": "695199",
+        "title": "소울",
+        "search_score": 63.126934
+      },
+      {
+        "doc_id": "75674",
+        "title": "액트 오브 밸러: 최정예 특수부대",
+        "search_score": 59.543293
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 58.409676
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 58.097244
+      },
+      {
+        "doc_id": "418487",
+        "title": "회복",
+        "search_score": 57.37848
+      }
+    ]
+  },
+  {
+    "profile_id": "p10_intense",
+    "description": "강한 자극과 몰입을 원하는 상태",
+    "hybrid_results": [
+      {
+        "doc_id": "157336",
+        "title": "인터스텔라",
+        "search_score": 0.0211267601698637,
+        "rerank_score": 2.068235397338867,
+        "final_rank_score": 8.675833
+      },
+      {
+        "doc_id": "24428",
+        "title": "어벤져스",
+        "search_score": 0.03896104171872139,
+        "rerank_score": 2.1073155403137207,
+        "final_rank_score": 8.260908
+      },
+      {
+        "doc_id": "374720",
+        "title": "덩케르크",
+        "search_score": 0.02031596563756466,
+        "rerank_score": 1.8777081966400146,
+        "final_rank_score": 8.103441
+      },
+      {
+        "doc_id": "299534",
+        "title": "어벤져스: 엔드게임",
+        "search_score": 0.024257991462945938,
+        "rerank_score": 1.812131404876709,
+        "final_rank_score": 7.910652
+      },
+      {
+        "doc_id": "1726",
+        "title": "아이언맨",
+        "search_score": 0.016885772347450256,
+        "rerank_score": 2.0804646015167236,
+        "final_rank_score": 7.80828
+      },
+      {
+        "doc_id": "693134",
+        "title": "듄: 파트2",
+        "search_score": 0.016853932291269302,
+        "rerank_score": 1.7646324634552002,
+        "final_rank_score": 7.760751
+      },
+      {
+        "doc_id": "353081",
+        "title": "미션 임파서블: 폴아웃",
+        "search_score": 0.01923076994717121,
+        "rerank_score": 1.6086660623550415,
+        "final_rank_score": 7.295229
+      },
+      {
+        "doc_id": "11054",
+        "title": "헤어스프레이",
+        "search_score": 0.0204890426248312,
+        "rerank_score": 2.0407638549804688,
+        "final_rank_score": 7.142781
+      },
+      {
+        "doc_id": "475557",
+        "title": "조커",
+        "search_score": 0.02114996872842312,
+        "rerank_score": 1.4541175365447998,
+        "final_rank_score": 6.833503
+      },
+      {
+        "doc_id": "332567",
+        "title": "언더 워터",
+        "search_score": 0.026701120659708977,
+        "rerank_score": 1.9275110960006714,
+        "final_rank_score": 6.809234
+      },
+      {
+        "doc_id": "33196",
+        "title": "해운대",
+        "search_score": 0.024114267900586128,
+        "rerank_score": 1.7206783294677734,
+        "final_rank_score": 6.736149
+      },
+      {
+        "doc_id": "119450",
+        "title": "혹성탈출: 반격의 서막",
+        "search_score": 0.02311275713145733,
+        "rerank_score": 1.7022459506988525,
+        "final_rank_score": 6.679851
+      },
+      {
+        "doc_id": "296524",
+        "title": "딥워터 호라이즌",
+        "search_score": 0.017420051619410515,
+        "rerank_score": 1.6866493225097656,
+        "final_rank_score": 6.627368
+      },
+      {
+        "doc_id": "17654",
+        "title": "디스트릭트 9",
+        "search_score": 0.028281409293413162,
+        "rerank_score": 1.6632542610168457,
+        "final_rank_score": 6.568044
+      },
+      {
+        "doc_id": "350650",
+        "title": "극장판 도라에몽 : 진구의 우주영웅기~스페이스 히어로즈~",
+        "search_score": 0.01781763695180416,
+        "rerank_score": 2.065133810043335,
+        "final_rank_score": 6.563219
+      }
+    ],
+    "keyword_results": [
+      {
+        "doc_id": "752886",
+        "title": "강릉",
+        "search_score": 49.1427
+      },
+      {
+        "doc_id": "74643",
+        "title": "아티스트",
+        "search_score": 40.630062
+      },
+      {
+        "doc_id": "43593",
+        "title": "피라냐",
+        "search_score": 35.91915
+      },
+      {
+        "doc_id": "22733",
+        "title": "데블",
+        "search_score": 34.517933
+      },
+      {
+        "doc_id": "437633",
+        "title": "리얼",
+        "search_score": 33.742836
+      },
+      {
+        "doc_id": "235260",
+        "title": "선 오브 갓",
+        "search_score": 31.193192
+      },
+      {
+        "doc_id": "24428",
+        "title": "어벤져스",
+        "search_score": 29.383028
+      },
+      {
+        "doc_id": "424998",
+        "title": "예수는 역사다",
+        "search_score": 29.32132
+      },
+      {
+        "doc_id": "333339",
+        "title": "레디 플레이어 원",
+        "search_score": 29.060251
+      },
+      {
+        "doc_id": "574303",
+        "title": "악질경찰",
+        "search_score": 28.713842
+      },
+      {
+        "doc_id": "326215",
+        "title": "노아의 방주: 남겨진 녀석들",
+        "search_score": 27.241337
+      },
+      {
+        "doc_id": "16140",
+        "title": "데스노트 : 라스트 네임",
+        "search_score": 27.069563
+      },
+      {
+        "doc_id": "17593",
+        "title": "영화는 영화다",
+        "search_score": 26.900747
+      },
+      {
+        "doc_id": "22520",
+        "title": "아치와 씨팍",
+        "search_score": 26.289932
+      },
+      {
+        "doc_id": "345911",
+        "title": "라이트 아웃",
+        "search_score": 25.83224
+      }
+    ]
+  }
+]

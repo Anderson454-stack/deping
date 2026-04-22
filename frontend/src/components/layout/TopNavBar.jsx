@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 const NAV_ITEMS = [
   { to: '/',         label: 'Cinema',   ready: true  },
   { to: '/discover', label: 'Discover', ready: false },
-  { to: '/journal',  label: 'Journal',  ready: false },
+  { to: '/journal',  label: 'Journal',  ready: true  },
 ];
 
 const TopNavBar = ({ onMenuToggle }) => {

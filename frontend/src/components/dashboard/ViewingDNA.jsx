@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRecommendationHistory } from '../../hooks/useRecommendationHistory';
+import { analyzeViewingDNA } from '../../utils/viewingDnaAnalyzer';
 
 function CardEmptyState({ title, description }) {
   return (
@@ -26,7 +27,14 @@ function CardEmptyState({ title, description }) {
 }
 
 const ViewingDNA = () => {
-  const { hasHistory } = useRecommendationHistory();
+  const { dashboardSource } = useRecommendationHistory();
+  const { movies, tags, summary, pulse } = analyzeViewingDNA(dashboardSource.movies);
+  const hasAnyData = movies.length > 0;
+  const hasEnoughData = movies.length >= 3;
+  const pulseWidth = pulse.score ?? 0;
+  const sourceLabel = dashboardSource.source === 'journal_fallback'
+    ? 'Saved History'
+    : 'Recommendation History';
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -36,26 +44,31 @@ const ViewingDNA = () => {
         style={{ background: 'var(--color-surface-raised)' }}
       >
         <div className="relative z-10">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Current Profile</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">{sourceLabel}</span>
 
-          {hasHistory ? (
+          {hasAnyData ? (
             <>
               <h3 className="text-2xl font-bold mb-6">Your Viewing DNA</h3>
               <div className="flex flex-wrap gap-3">
-                {['Noir Minimalism', '90s Hong Kong', 'Surrealist Narrative', 'Technicolor Epics'].map((tag) => (
+                {tags.map((tag) => (
                   <span key={tag} className="px-4 py-2 bg-surface-container-low rounded-full text-sm font-medium">
                     {tag}
                   </span>
                 ))}
               </div>
-              <p className="mt-8 text-on-surface-variant italic leading-relaxed">
-                "You seem to be gravitating towards high-contrast visual storytelling with a preference for non-linear timelines and isolationist character arcs."
+              <p className="mt-8 text-on-surface-variant leading-relaxed">
+                {summary}
               </p>
+              {!hasEnoughData && (
+                <p className="mt-3 text-xs text-on-surface-variant/60">
+                  추천 데이터가 더 쌓이면 태그와 설명이 더 안정적으로 정리됩니다.
+                </p>
+              )}
             </>
           ) : (
             <CardEmptyState
-              title="아직 데이터가 없어요!"
-              description={"챗봇과 대화 이후\n당신의 데이터를 보여드릴게요~!"}
+              title="아직 추천 데이터가 없어요"
+              description={"챗봇과 대화를 시작하면\n추천 패턴을 바탕으로 취향을 요약해드릴게요."}
             />
           )}
         </div>
@@ -69,25 +82,30 @@ const ViewingDNA = () => {
       >
         <div>
           <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Active Pulse</span>
-          {hasHistory && <h3 className="text-2xl font-bold">Curation Score</h3>}
+          {hasAnyData && <h3 className="text-2xl font-bold">최근 추천 성향 응집도</h3>}
         </div>
 
-        {hasHistory ? (
+        {hasAnyData ? (
           <>
             <div className="py-4">
               <div className="text-6xl font-black text-primary tracking-tighter">
-                84<span className="text-2xl opacity-50">%</span>
+                {pulse.score ?? '--'}
+                {pulse.score != null && <span className="text-2xl opacity-50">%</span>}
               </div>
-              <p className="text-on-surface-variant text-sm mt-2">Alignment with critical consensus</p>
+              <p className="text-on-surface-variant text-sm mt-2">{pulse.label}</p>
+              <p className="text-on-surface-variant/70 text-xs mt-2 leading-relaxed">{pulse.description}</p>
             </div>
             <div className="h-2 w-full bg-surface-container rounded-full overflow-hidden">
-              <div className="h-full bg-primary rounded-full w-[84%]"></div>
+              <div
+                className="h-full bg-primary rounded-full transition-all duration-500"
+                style={{ width: `${pulseWidth}%` }}
+              />
             </div>
           </>
         ) : (
           <CardEmptyState
-            title="아직 데이터가 없어요!"
-            description={"챗봇과 대화 이후에\n당신의 데이터를 보여드릴게요!"}
+            title="아직 패턴을 읽을 데이터가 없어요"
+            description={"최근 추천이 쌓이면\n취향 축의 선명도를 계산해드릴게요."}
           />
         )}
       </div>

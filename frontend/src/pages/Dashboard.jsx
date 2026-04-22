@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageTransition } from '../components/motion/PageTransition';
 import ViewingDNA from '../components/dashboard/ViewingDNA';
@@ -25,30 +25,81 @@ function tagsToKeywords(tags) {
 // 현재 DNA 태그 (ViewingDNA 컴포넌트와 동일한 값)
 const CURRENT_DNA_TAGS = ['Noir Minimalism', '90s Hong Kong', 'Surrealist Narrative', 'Technicolor Epics'];
 const THEME_PREVIEW_MONTH = 5;
+const DASHBOARD_CACHE_KEY = 'deping_dashboard_cache';
+const DASHBOARD_SCROLL_KEY = 'deping_dashboard_scroll_top';
+
+function readDashboardCache() {
+  try {
+    const raw = sessionStorage.getItem(DASHBOARD_CACHE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeDashboardCache(value) {
+  try {
+    sessionStorage.setItem(DASHBOARD_CACHE_KEY, JSON.stringify(value));
+  } catch {
+    // noop
+  }
+}
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const { recentHistory } = useRecommendationHistory();
   const currentMonth = new Date().getMonth() + 1;
-  const [boxOffice, setBoxOffice] = useState([]);
-  const [boxOfficeLoading, setBoxOfficeLoading] = useState(true);
-  const [featured, setFeatured] = useState([]);
-  const [featuredLoading, setFeaturedLoading] = useState(true);
-  const [monthlyTheme, setMonthlyTheme] = useState(null);
-  const [themeLoading, setThemeLoading] = useState(true);
-  const [community, setCommunity] = useState([]);
-  const [communityLoading, setCommunityLoading] = useState(true);
+  const cache = useMemo(() => readDashboardCache(), []);
+  const scrollContainerRef = useRef(null);
+  const [boxOffice, setBoxOffice] = useState(() => cache?.boxOffice ?? []);
+  const [boxOfficeLoading, setBoxOfficeLoading] = useState(() => !cache?.boxOffice);
+  const [featured, setFeatured] = useState(() => cache?.featured ?? []);
+  const [featuredLoading, setFeaturedLoading] = useState(() => !cache?.featured);
+  const [monthlyTheme, setMonthlyTheme] = useState(() => cache?.monthlyTheme ?? null);
+  const [themeLoading, setThemeLoading] = useState(() => !cache || !('monthlyTheme' in cache));
+  const [community, setCommunity] = useState(() => cache?.community ?? []);
+  const [communityLoading, setCommunityLoading] = useState(() => !cache?.community);
 
   const isNewUser = recentHistory.length === 0;
 
+  useEffect(() => {
+    writeDashboardCache({
+      boxOffice,
+      featured,
+      monthlyTheme,
+      community,
+    });
+  }, [boxOffice, featured, monthlyTheme, community]);
+
+  useEffect(() => {
+    const savedScroll = Number(sessionStorage.getItem(DASHBOARD_SCROLL_KEY) ?? 0);
+    if (!Number.isFinite(savedScroll) || savedScroll <= 0) return;
+
+    const frameId = window.requestAnimationFrame(() => {
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollTop = savedScroll;
+      }
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, []);
+
+  const handleScroll = useCallback((event) => {
+    sessionStorage.setItem(DASHBOARD_SCROLL_KEY, String(event.currentTarget.scrollTop));
+  }, []);
+
   // ── 박스오피스 (마운트 1회) ───────────────────────────────
   useEffect(() => {
+    if (cache?.boxOffice) {
+      setBoxOfficeLoading(false);
+      return;
+    }
     setBoxOfficeLoading(true);
     movieService.getBoxOffice()
       .then(res => setBoxOffice(Array.isArray(res.data) ? res.data : []))
       .catch(() => setBoxOffice([]))
       .finally(() => setBoxOfficeLoading(false));
-  }, []);
+  }, [cache?.boxOffice]);
 
   // ── 오늘의 추천: 마운트 + 15분마다 갱신 ─────────────────
   const fetchFeatured = useCallback(() => {
@@ -60,12 +111,18 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    fetchFeatured();
+    if (!cache?.featured) {
+      fetchFeatured();
+    }
     const interval = setInterval(fetchFeatured, 15 * 60 * 1000);
     return () => clearInterval(interval);
-  }, [fetchFeatured]);
+  }, [cache?.featured, fetchFeatured]);
 
   useEffect(() => {
+    if (cache && 'monthlyTheme' in cache) {
+      setThemeLoading(false);
+      return;
+    }
     setThemeLoading(true);
     movieService.getMonthlyTheme(currentMonth)
       .then(async (res) => {
@@ -90,18 +147,22 @@ const Dashboard = () => {
       })
       .catch(() => setMonthlyTheme(null))
       .finally(() => setThemeLoading(false));
-  }, [currentMonth]);
+  }, [cache, currentMonth]);
 
   // ── Community DNA: DNA 태그 기반 키워드 추천 ────────────
   useEffect(() => {
     if (!isNewUser) { setCommunityLoading(false); return; }
+    if (cache?.community) {
+      setCommunityLoading(false);
+      return;
+    }
     const keywords = tagsToKeywords(CURRENT_DNA_TAGS);
     setCommunityLoading(true);
     movieService.getCommunityMovies(keywords, 6)
       .then(res => setCommunity(Array.isArray(res.data) ? res.data : []))
       .catch(() => setCommunity([]))
       .finally(() => setCommunityLoading(false));
-  }, [isNewUser]);
+  }, [cache?.community, isNewUser]);
 
   // 신규 사용자: API 결과 or fallback 하드코딩 카드
   const fallbackCommunity = [
@@ -176,7 +237,11 @@ const Dashboard = () => {
 
   return (
     <PageTransition className="h-full">
-      <div className="h-full overflow-y-auto px-6 md:px-12 py-8">
+      <div
+        ref={scrollContainerRef}
+        onScroll={handleScroll}
+        className="h-full overflow-y-auto px-6 md:px-12 py-8"
+      >
       <div className="max-w-7xl mx-auto pb-12">
 
         {/* ── 히어로: 중앙 CTA ─────────────────────────── */}
